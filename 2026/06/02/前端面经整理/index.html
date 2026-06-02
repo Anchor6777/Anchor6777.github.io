@@ -1,0 +1,1081 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>前端面经整理 - Anchor&#039;s Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Anchor&#039;s Blog"><meta name="msapplication-TileImage" content="icons/1761593563801.jpg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Anchor&#039;s Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="前端面经总结"><meta property="og:type" content="blog"><meta property="og:title" content="前端面经整理"><meta property="og:url" content="https://anchor6777.github.io/2026/06/02/%E5%89%8D%E7%AB%AF%E9%9D%A2%E7%BB%8F%E6%95%B4%E7%90%86/"><meta property="og:site_name" content="Anchor&#039;s Blog"><meta property="og:description" content="前端面经总结"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://www.imaegoo.com/gallery/vector/vector_landscape_1.svg"><meta property="article:published_time" content="2026-06-02T12:12:09.022Z"><meta property="article:modified_time" content="2026-06-02T12:25:46.644Z"><meta property="article:author" content="Anchor"><meta property="article:tag" content="前端"><meta property="article:tag" content="面试"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://www.imaegoo.com/gallery/vector/vector_landscape_1.svg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://anchor6777.github.io/2026/06/02/%E5%89%8D%E7%AB%AF%E9%9D%A2%E7%BB%8F%E6%95%B4%E7%90%86/"},"headline":"前端面经整理","image":[],"datePublished":"2026-06-02T12:12:09.022Z","dateModified":"2026-06-02T12:25:46.644Z","author":{"@type":"Person","name":"Anchor"},"publisher":{"@type":"Organization","name":"Anchor's Blog","logo":{"@type":"ImageObject","url":{"light":"/img/logo.svg","dark":"/img/logo-dark.svg"}}},"description":"前端面经总结"}</script><link rel="canonical" href="https://anchor6777.github.io/2026/06/02/%E5%89%8D%E7%AB%AF%E9%9D%A2%E7%BB%8F%E6%95%B4%E7%90%86/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.2"></head><body class="is-2-column"><script type="text/javascript" src="/js/imaegoo/night.js"></script><canvas id="universe"></canvas><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img class="logo-img" src="/img/logo.svg" alt="Anchor&#039;s Blog" height="28"><img class="logo-img-dark" src="/img/logo-dark.svg" alt="Anchor&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">目录</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item night" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/Anchor6777/"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://www.imaegoo.com/gallery/vector/vector_landscape_1.svg" alt="前端面经整理" referrerpolicy="no-referrer"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2026-06-02T12:12:09.022Z" title="2026/6/2 20:12:09">2026-06-02</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-06-02T12:25:46.644Z" title="2026/6/2 20:25:46">2026-06-02</time></span><span class="level-item">2 hours read (About 21027 words)</span><span class="level-item leancloud_visitors" id="/2026/06/02/%E5%89%8D%E7%AB%AF%E9%9D%A2%E7%BB%8F%E6%95%B4%E7%90%86/" data-flag-title="前端面经整理"><i class="far fa-eye"></i>&nbsp;&nbsp;<span id="twikoo_visitors"><i class="fa fa-spinner fa-spin"></i></span>&nbsp;visits</span></div></div><h1 class="title is-3 is-size-4-mobile">前端面经整理</h1><div class="content"><p>前端面经总结</p>
+<span id="more"></span>
+
+<h2 id="CSS相关"><a href="#CSS相关" class="headerlink" title="CSS相关"></a>CSS相关</h2><h3 id="垂直居中有哪些实现方式"><a href="#垂直居中有哪些实现方式" class="headerlink" title="垂直居中有哪些实现方式"></a>垂直居中有哪些实现方式</h3><p>块级元素：</p>
+<ul>
+<li><p>绝对定位 + <code>top: 50%</code> + <code>margin: -50%高度</code></p>
+<p>需要知道子元素宽高，父元素position设置为除static以外的值</p>
+</li>
+<li><p>绝对定位 + <code>top: 50%</code> + <code>transform：translate(0, -50%)</code></p>
+<p>不需要知道子元素宽高，父元素position设置为除static以外的值</p>
+</li>
+<li><p>绝对定位 + <code>top/left/bottom/right : 0</code> + <code>margin：auto</code></p>
+<p>父元素position设置为除static以外的值，top、left、bottom、right都要为0</p>
+</li>
+<li><p>相对定位 + <code>top: 50%</code> + <code>transform：translate(0, -50%)</code></p>
+<p>优点：不需要更改父元素，但是元素不会脱离文档流。</p>
+</li>
+<li><p>flex布局 &#x2F; grid布局，设置<code>align-items: center</code></p>
+</li>
+<li><p>table布局，设置父元素为<code>display: table-cell</code>，子元素设置 <code>display: inline-block</code>。利用<code>vertical</code>和<code>text-align</code>可以让所有的行内块级元素水平垂直居中</p>
+</li>
+</ul>
+<p>行内元素：</p>
+<ul>
+<li>设置<code>line-height</code>和元素高度相同，可以实现单行文本垂直居中</li>
+<li>设置<code>line-height</code>和元素高度相同、<code>vertical-align: middle</code>可以实现行内元素居中</li>
+</ul>
+<h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3><p>一个块级盒子由几个部分组成，分别是</p>
+<ul>
+<li>内容区域</li>
+<li>内边距 padding</li>
+<li>边框 border</li>
+<li>外边距 margin</li>
+</ul>
+<p>标准盒模型中，width和height指定内容区域的尺寸；替代盒模型中，width和height包括内容区域、内边距和边框的尺寸，内容区域需要减掉内外边距和边框的大小。</p>
+<h3 id="position-absolute，relative，fixed"><a href="#position-absolute，relative，fixed" class="headerlink" title="position: absolute，relative，fixed"></a>position: absolute，relative，fixed</h3><ul>
+<li><code>position: absolute</code>代表绝对定位，设置绝对定位的元素会从文档流中移除，通过top、left、bottom、right属性确定位置。定位的上下文元素是其最近的<code>position</code>属性不是默认值的父元素，一般设置为<code>relative</code>。如果所有父元素的positon属性都时默认值，就相对于视口定位。</li>
+<li><code>position: relative</code>代表相对定位，它不会影响元素的布局，设置top、left、bottom、right属性相对于原本位置偏移，偏移量不会影响其他元素。</li>
+<li><code>position: fixed</code>代表固定定位，行为和绝对定位类似，区别是它的定位上下文是视口</li>
+</ul>
+<h3 id="BFC-文档流、创建BFC的方式"><a href="#BFC-文档流、创建BFC的方式" class="headerlink" title="BFC&#x2F;文档流、创建BFC的方式"></a>BFC&#x2F;文档流、创建BFC的方式</h3><ul>
+<li><p>什么是BFC？</p>
+<p>BFC全称区块格式化上下文，是一个特殊的布局上下文，在布局时有一些特殊的规则。例如可以<strong>包含内部浮动元素、排斥外部浮动元素、防止外边距重叠</strong>等。</p>
+</li>
+<li><p>创建BFC的方式有哪些？</p>
+<ul>
+<li>设置<code>display: flow-root</code>属性</li>
+<li>设置 <code>overflow: auto</code> 或除初始值 <code>overflow: visible</code> 之外的其他值</li>
+<li>根元素、浮动元素、绝对定位元素也会创建BFC。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Guides/Display/Block_formatting_context">区块格式化上下文 - CSS：层叠样式表 | MDN</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.hidocs.vip/chase/oneArticle/%E4%B8%80%E6%96%87%E6%90%9E%E6%87%82%E6%A0%87%E5%87%86%E6%96%87%E6%A1%A3%E6%B5%81%E3%80%81%E8%84%B1%E7%A6%BB%E6%96%87%E6%A1%A3%E6%B5%81%E3%80%81BFC%E4%B8%8A%E4%B8%8B%E6%96%87.html">一文搞懂标准文档流、脱离文档流、BFC上下文 | HiDocs</a></p>
+</blockquote>
+<h3 id="口述三栏布局的实现方式"><a href="#口述三栏布局的实现方式" class="headerlink" title="口述三栏布局的实现方式"></a>口述三栏布局的实现方式</h3><p><u>圣杯布局</u>：</p>
+<ol>
+<li>左中右三个元素设置左浮动</li>
+<li>左右元素定宽，中间元素宽度100%</li>
+<li>左元素设置margin：-100%，使得左元素上升一行并处于最左侧；右元素设置marigin自身宽度的负值，使得右元素上升一行并处在最右侧。</li>
+<li>设置父元素的左右padding为左右元素预留空间。</li>
+<li>设置左右元素为相对定位，左元素的left和右元素的right为内边距的负值</li>
+</ol>
+<p><u>双飞翼布局</u>：</p>
+<ol>
+<li>左中右三个元素设置左浮动</li>
+<li>左右元素定宽，中间元素宽度100%</li>
+<li>左元素设置margin：-100%，使得左元素上升一行并处于最左侧；右元素设置marigin自身宽度的负值，使得右元素上升一行并处在最右侧。</li>
+<li>中间元素设置一个子元素，设置子元素的左右边距，给左右布局预留空间。</li>
+</ol>
+<p>双飞翼布局和圣杯布局的前三步是一样的，区别在于展示内容布局的方式。圣杯布局采用父元素设置padding，左右布局设置相对定位的方式；双飞翼布局则使用嵌套子元素设置外边距的方式。</p>
+<p><u>flex布局</u></p>
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904062224171021?searchId=20260325185100A0AE01B3225D79089DBD#heading-33">css布局篇——双栏布局与三栏布局本篇章主讲双栏布局和三栏布局的一些较为古老及实用的原理及实现。说它古老主要也是因为我们 - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903447259512839?searchId=20260325190839500A396706A8742BC876#heading-3">理解并运用 CSS 的负 margin 值本文样式代码采用 SCSS。浏览器兼容性为 IE6+。 你的网页中，不可能没有 - 掘金</a></p>
+</blockquote>
+<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><h3 id="有哪些可以实现动画的方式，css中的animation有哪些属性，js中可以实现动画吗"><a href="#有哪些可以实现动画的方式，css中的animation有哪些属性，js中可以实现动画吗" class="headerlink" title="有哪些可以实现动画的方式，css中的animation有哪些属性，js中可以实现动画吗"></a>有哪些可以实现动画的方式，css中的animation有哪些属性，js中可以实现动画吗</h3><h3 id="伪类和伪元素区别"><a href="#伪类和伪元素区别" class="headerlink" title="伪类和伪元素区别"></a>伪类和伪元素区别</h3><h3 id="事件委托、应用场景"><a href="#事件委托、应用场景" class="headerlink" title="事件委托、应用场景"></a>事件委托、应用场景</h3><h3 id="flex布局实现左侧固定宽度，右侧自适应"><a href="#flex布局实现左侧固定宽度，右侧自适应" class="headerlink" title="flex布局实现左侧固定宽度，右侧自适应"></a>flex布局实现左侧固定宽度，右侧自适应</h3><ol>
+<li><strong>左侧元素</strong>：通过 <code>flex-shrink: 0</code> 禁止收缩，并设置固定宽度（如 <code>width: 200px</code>）。</li>
+<li><strong>右侧元素</strong>：使用 <code>flex: 1</code> 或 <code>flex-grow: 1</code> 让其自动填充剩余空间。</li>
+</ol>
+<hr>
+<h2 id="JS相关"><a href="#JS相关" class="headerlink" title="JS相关"></a>JS相关</h2><h3 id="介绍一下面向对象三大特性"><a href="#介绍一下面向对象三大特性" class="headerlink" title="介绍一下面向对象三大特性"></a>介绍一下面向对象三大特性</h3><ul>
+<li>封装：将属性和方法封装在对象内部，并且控制成员的访问权限。可以提高内聚性，降低耦合性，便于维护。</li>
+<li>继承：子类可以使用父类的属性、方法，实现代码的复用。还能建立清晰的类层次关系，便于扩展和维护。</li>
+<li>多态：父类引用指向子类对象，继承是多态的基础。</li>
+</ul>
+<h3 id="this的指向"><a href="#this的指向" class="headerlink" title="this的指向"></a>this的指向</h3><p>this的指向取决于上下文，上下文包括函数上下文、全局上下文以及类上下文。</p>
+<ul>
+<li>对于全局上下文，this指向全局对象，由运行环境决定，一般是window。</li>
+<li>对于函数上下文，如果函数直接被调用，例如回调函数，this为全局对象window（严格模式为undefined）；如果是由对象调用的函数，this就是这个对象；如果是构造函数，this为正在构造的对象；对于箭头函数，this的指向等同于创建函数时所处上下文的this，并且保持不变不能更改。</li>
+<li>对于类上下文，如果是实例字段，this指向对象实例；如果是静态字段，this指向类本身。</li>
+<li>可以通过call apply bind方法显示设置函数的this值。</li>
+</ul>
+<h3 id="var和let、const有什么区别？"><a href="#var和let、const有什么区别？" class="headerlink" title="var和let、const有什么区别？"></a>var和let、const有什么区别？</h3><ul>
+<li><p>作用域不同</p>
+<p>var声明的变量只有函数作用域，没有块级作用域。而let、const定义的变量有块级作用域</p>
+</li>
+<li><p>变量提升</p>
+<p>JS引擎会将var变量的声明提升到作用域的顶部</p>
+</li>
+<li><p>可重复声明</p>
+<p>var变量允许重复声明，后面的声明会覆盖前面的。let则不允许</p>
+</li>
+<li><p>全局上下文中声明的var变量，会保存在window对象中，而let变量则不会。</p>
+</li>
+</ul>
+<h3 id="执行上下文、作用域"><a href="#执行上下文、作用域" class="headerlink" title="执行上下文、作用域"></a>执行上下文、作用域</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7207222166281470007?searchId=202603101631527290F367B5D2AF8C2F64">三道面试题让你掌握JavaScript中的执行上下文与作用域以及闭包笔者呢最近再回顾JavaScript知识时，又看到了 - 掘金</a></p>
+</blockquote>
+<h3 id="什么是闭包？有什么应用场景？"><a href="#什么是闭包？有什么应用场景？" class="headerlink" title="什么是闭包？有什么应用场景？"></a>什么是闭包？有什么应用场景？</h3><ul>
+<li><p>什么是闭包？</p>
+<p>闭包是指能访问外部函数作用域的函数，内部函数存在外部作用域的引用就会形成闭包。闭包的作用是创建私有作用域，保存函数的私有变量</p>
+</li>
+<li><p>闭包的使用场景</p>
+<ul>
+<li>防抖、节流。以及其他需要定义函数私有变量的情况。</li>
+<li>循环赋值。利用闭包会形成私有作用域的特点。</li>
+</ul>
+</li>
+<li><p>闭包变量在哪里存储（？）</p>
+<p>堆内存。假如闭包中的变量存储在栈内存中，函数执行完后，栈帧被销毁，闭包变量也就跟着销毁了。</p>
+</li>
+<li><p>使用闭包要注意什么？</p>
+<p>内存泄漏。如果一个变量持有内部函数的引用，内部函数又持有外部函数的引用，就发生了内存泄漏，外部引用不会被回收。注意使用完闭包函数后，把指向内部函数引用的变量置空即可</p>
+</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6911473286627098638?searchId=20260309172243C97159F385427D0B3622#heading-8">一篇文章彻底理解Javascript闭包（含闭包高频面试题）闭包简单理解就是内嵌函数，也即在函数中嵌套函数。 由于在JS - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6937469222251560990?searchId=202603091948236A98777645286C19DD2B#heading-10">JS 闭包经典使用场景和含闭包必刷题 堆内存：存储引用类型值，对象类型就是键值对，函数就是代码字符串。 栈内存：提供代码 - 掘金</a></p>
+</blockquote>
+<h3 id="闭包导致的内存泄漏怎么定位"><a href="#闭包导致的内存泄漏怎么定位" class="headerlink" title="闭包导致的内存泄漏怎么定位"></a>闭包导致的内存泄漏怎么定位</h3><p>performance 面板 和 memory 面板可以找到泄露的现象和位置</p>
+<h3 id="原型、原型链"><a href="#原型、原型链" class="headerlink" title="原型、原型链"></a>原型、原型链</h3><ul>
+<li><p>什么是原型、原型链？</p>
+<p>原型是指构造函数的prototype属性，使用new构造对象时，会把这个原型对象赋值给实例对象的proto属性。它的作用是储存实例对象的公共属性，起到复用、节省内存的效果。</p>
+<p>而prototype原型对象也是一个对象，也具有_ proto _属性，因而构成了原型链。</p>
+<p>JS通过原型链实现继承。</p>
+</li>
+<li><p>JS对象类型</p>
+<p>JS对象分为函数对象和普通对象，只有函数对象有prototype属性。</p>
+</li>
+<li><p>Object、Function都是js内置的<strong>函数</strong></p>
+<p>重点：</p>
+<ul>
+<li>Object.<em>proto</em> &#x3D; Function.prototype（因为Obejct是函数）</li>
+<li>Function.prototype.<em>proto</em> &#x3D; Object.prototype（因为原型对象prototype也是对象，所有对象的_proto_最终都会指向一号对象Object.prototype）</li>
+<li>Object.prototype.<em>proto</em> &#x3D; null</li>
+</ul>
+</li>
+<li><p>属性屏蔽、属性覆盖</p>
+<p>实例对象重写原型上继承的属性、方法，相当于“属性覆盖、属性屏蔽”，这一操作不会改变原型上的属性、方法，自然也不会改变由统一构造函数创建的其他实例。</p>
+<p>只有修改原型对象上的属性、方法，才能改变其他实例通过原型链获得的属性、方法。</p>
+</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903989088092174?searchId=202603101526189A1BF87662694289C43A">轻松理解JS 原型原型链理解js中原型、原型链这个概念，绝对是帮助我们更深入学习js的必要一步，比如，如果js开发者想理 - 掘金</a></p>
+</blockquote>
+<h3 id="堆和栈区别"><a href="#堆和栈区别" class="headerlink" title="堆和栈区别"></a>堆和栈区别</h3><h3 id="讲一讲js的面向对象与Java的不同，为什么js采用的基于原型的OOP"><a href="#讲一讲js的面向对象与Java的不同，为什么js采用的基于原型的OOP" class="headerlink" title="讲一讲js的面向对象与Java的不同，为什么js采用的基于原型的OOP"></a>讲一讲js的面向对象与Java的不同，为什么js采用的基于原型的OOP</h3><h3 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h3><h3 id="和-的区别"><a href="#和-的区别" class="headerlink" title="&#x3D;&#x3D; 和 &#x3D;&#x3D;&#x3D; 的区别"></a>&#x3D;&#x3D; 和 &#x3D;&#x3D;&#x3D; 的区别</h3><p>&#x3D;&#x3D;在比较之前会进行类型转换，并且null和undefined是相等的；而&#x3D;&#x3D;&#x3D;不会转换类型，null和undefined也不等价，只有类型和值都相等才判断相等。</p>
+<h3 id="的值，-调用的是堆内存还是栈"><a href="#的值，-调用的是堆内存还是栈" class="headerlink" title="[]&#x3D;&#x3D;[]的值，[]调用的是堆内存还是栈"></a>[]&#x3D;&#x3D;[]的值，[]调用的是堆内存还是栈</h3><h3 id="null和undefined的区别"><a href="#null和undefined的区别" class="headerlink" title="null和undefined的区别"></a>null和undefined的区别</h3><p>null和undefined很相似，在if语句中都等价于false；但是它们的语义不同，null表示变量为空，而undefined表示变量未定义</p>
+<h3 id="JS垃圾回收机制"><a href="#JS垃圾回收机制" class="headerlink" title="JS垃圾回收机制"></a>JS垃圾回收机制</h3><p>JS的垃圾回收器使用标记清除算法找到需要回收的对象。它会定期从根对象开始，就是全局对象，找到从这些根引用的所有对象，在找到这些对象能引用到的对象。最后垃圾回收器会找到所有可到达的对象，并收集所有不能到达的对象，并进行清理。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Memory_management">内存管理 - JavaScript | MDN</a></p>
+</blockquote>
+<h3 id="JS类与原型的关系"><a href="#JS类与原型的关系" class="headerlink" title="JS类与原型的关系"></a>JS类与原型的关系</h3><p>类本质上是原型的语法糖。</p>
+<p>在类上定义的方法会赋值给类的prototype原型</p>
+<p>通过new创建类实例，会将实例的原型（<code>[[Prototype]] / __proto__</code>）指向类的原型对象prototype</p>
+<p>类继承（extends）也是通过原型链实现的，把子类原型（<code>[[Prototype]] / __proto__</code>）指向父类的原型对象prototype</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhwblackcat/p/18895681">类的实现，与原型和原型链的关系 - 张浩伟 - 博客园</a></p>
+</blockquote>
+<h3 id="JavaScript有哪些数据类型，基本类型和引用类型的区别"><a href="#JavaScript有哪些数据类型，基本类型和引用类型的区别" class="headerlink" title="JavaScript有哪些数据类型，基本类型和引用类型的区别"></a>JavaScript有哪些数据类型，基本类型和引用类型的区别</h3><ul>
+<li>基本类型：数字（Number）、字符串（String）、布尔（Boolean）、空（null）、未定义（undefined）</li>
+<li>引用类型：对象（Object）、数组（Array）、函数（Function）、日期（Date）、正则（RegExp）</li>
+</ul>
+<p>变量保存在栈内存中。基本类型保存的是值；引用类型保存的是引用，也就是对象的地址，实际对象储存在堆内存中。</p>
+<h3 id="介绍一下rAF，如何使用它？"><a href="#介绍一下rAF，如何使用它？" class="headerlink" title="介绍一下rAF，如何使用它？"></a>介绍一下rAF，如何使用它？</h3><p>rAF（requestAnimationFrame()）是浏览器提供的用于执行动画的api，回调在页面重绘之前被调用。调用频率和显示器刷新率一致。</p>
+<p>首先记录动画的开始时间，调用rAF，在回调中根据传入的时间参数来计算当前的动画进度，再递归调用rAF。</p>
+<h3 id="如何实现图片拖拽功能？"><a href="#如何实现图片拖拽功能？" class="headerlink" title="如何实现图片拖拽功能？"></a>如何实现图片拖拽功能？</h3><p>通过监听鼠标事件mousedown、mousemove、mouseup实现。</p>
+<p>监听到mousedown事件时，确定拖拽的元素，再克隆一个同样的元素添加到父元素中，同时设置固定定位，top、left的值根据鼠标事件的clientX、clientY确定</p>
+<p>监听到mousemove事件时，根据鼠标事件的clientX、clientY更新克隆元素的top、left，就可以实现拖拽功能</p>
+<p>监听到mouseup事件时，将克隆元素移动到初始位置，通过transition实现过渡动画，再设置一个定时器，经过动画持续时间后删除掉克隆元素。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7145447742515445791?searchId=20260513154704E73BA7B859A3379F054C#heading-3">原生拖拽太拉跨了，纯JS自己手写一个拖拽效果，纵享丝滑说到元素拖拽，通常都会先想到用 HTML5 的拖拽放置 (Drag - 掘金</a></p>
+</blockquote>
+<h3 id="ES6、ES7有哪些新特性？"><a href="#ES6、ES7有哪些新特性？" class="headerlink" title="ES6、ES7有哪些新特性？"></a>ES6、ES7有哪些新特性？</h3><ul>
+<li>const、let</li>
+<li>箭头函数</li>
+<li>ES模块，通过import和export实现导入导出</li>
+<li>类、继承</li>
+<li>promise</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7358361832460173349?searchId=2026051610323258709226E6969E81905E#heading-4">ES6、Css3 和 HTML5 新增的特性📢最近准备春招啦了，所以整理了一些前端高频大厂面试题，分享给大家，如有问题 - 掘金</a></p>
+</blockquote>
+<h2 id="TS相关"><a href="#TS相关" class="headerlink" title="TS相关"></a>TS相关</h2><h3 id="什么是TS"><a href="#什么是TS" class="headerlink" title="什么是TS"></a>什么是TS</h3><p>TypeScript是JavaScript的超集，在JavaScript基础上添加了静态类型，提供编译时类型检查、类型推导等功能。能帮助开发人员规避一些常见的类型错误，提高代码的可读性和可维护性。</p>
+<h3 id="JS和TS的区别"><a href="#JS和TS的区别" class="headerlink" title="JS和TS的区别"></a>JS和TS的区别</h3><p>JS是动态类型语言，不需要显示声明变量类型，变量类型在运行时确定，且可以改变。TS是静态类型语言，变量在声明时需要确定类型，并且提供类型检查、类型推导等功能，提高代码的可读性和可维护性。</p>
+<h3 id="什么是类型声明和类型推断？"><a href="#什么是类型声明和类型推断？" class="headerlink" title="什么是类型声明和类型推断？"></a>什么是类型声明和类型推断？</h3><p>类型声明是指在声明变量时，显示指定变量的类型；类型推断是指TS根据赋值语句右侧表达式的值自动推断变量的类型。</p>
+<h3 id="什么是接口（interface）？接口和类型别名的区别"><a href="#什么是接口（interface）？接口和类型别名的区别" class="headerlink" title="什么是接口（interface）？接口和类型别名的区别"></a>什么是接口（interface）？接口和类型别名的区别</h3><p>接口是用来描述对象结构的结构化类型。它定义了对象应该包含哪些属性和方法。</p>
+<p>而类型别名的作用是给类型起一个新名字，便于在多个地方复用。常见的使用场景是联合类型。</p>
+<h3 id="什么是泛型？"><a href="#什么是泛型？" class="headerlink" title="什么是泛型？"></a>什么是泛型？</h3><p>泛型就是类型参数，可以定义泛型类或者泛型函数。比如Set和Map类，其内部元素的类型不固定，在声明时指定，这种情况下就可以使用泛型。</p>
+<h3 id="什么是联合类型和交叉类型"><a href="#什么是联合类型和交叉类型" class="headerlink" title="什么是联合类型和交叉类型"></a>什么是联合类型和交叉类型</h3><p>联合类型表示一个值可以是多个类型中的一种；交叉类型表示一个值包括多个类型的特性。</p>
+<p>联合类型和交叉类型是或和与的关系。</p>
+<h2 id="Vue相关"><a href="#Vue相关" class="headerlink" title="Vue相关"></a>Vue相关</h2><h3 id="谈谈对-Vue、React-框架的理解？"><a href="#谈谈对-Vue、React-框架的理解？" class="headerlink" title="谈谈对 Vue、React 框架的理解？"></a>谈谈对 Vue、React 框架的理解？</h3><p>我认为框架的最大作用就是简化开发流程、提高效率。</p>
+<p>谈到Vue，我最先想到的是响应式、组件化。Vue的响应式变量，可以减少很多JS中的模板代码、解决回调嵌套等问题，组件化让我们更方便的封装常用的组件，提高代码复用性，避免重复造轮子。</p>
+<p>React我虽然没有学过，但是我觉得尽管语法上有区别，思想和用途都是大同小异的。</p>
+<h3 id="描述一下vue3的生命周期"><a href="#描述一下vue3的生命周期" class="headerlink" title="描述一下vue3的生命周期"></a>描述一下vue3的生命周期</h3><p>Vue3组件的生命周期包含四个阶段：实例化、挂载、更新、卸载</p>
+<ul>
+<li>组件实例化后，初始化响应式状态，包括响应式数据、计算属性、方法和监听器，初始化前后调用<code>beforeCreate</code>和<code>created</code>（虚拟dom未创建）钩子；</li>
+<li>随后组件将被挂载，创建DOM树插入父容器，挂载前后调用<code>beforeMount</code>（虚拟dom已创建）和<code>mounted</code>钩子；</li>
+<li>如果响应式状态变更，会更新DOM树，更新前后调用<code>beforeUpdate</code>和<code>updated</code>钩子</li>
+<li>最后组件会被卸载，所有响应式状态被清除，可以在相关钩子中清除一些副作用。</li>
+</ul>
+<h3 id="请解释一下挂载的含义？"><a href="#请解释一下挂载的含义？" class="headerlink" title="请解释一下挂载的含义？"></a>请解释一下挂载的含义？</h3><p>挂载就是指根据虚拟dom创建真实dom的过程</p>
+<h3 id="响应式原理，vue2-和-vue3-响应式原理的区别"><a href="#响应式原理，vue2-和-vue3-响应式原理的区别" class="headerlink" title="响应式原理，vue2 和 vue3 响应式原理的区别"></a>响应式原理，vue2 和 vue3 响应式原理的区别</h3><p>vue的响应式实现分为三步：</p>
+<ol>
+<li>监听变量的访问和更新，也就是get和set方法</li>
+<li>变量被访问时，将依赖项封装为Watcher实例收集起来</li>
+<li>变量被更新时，通知依赖变量的所有Watcher更新</li>
+</ol>
+<ul>
+<li><p>（vue2 和 vue3 响应式原理的区别）对于变量访问和更新的监听，也就是get和set方法的监听，vue2使用<code>defineProperty()</code>方法实现，vue3使用<code>proxy</code>代理对象实现。</p>
+<p><code>defineProperty()</code>监听的是变量，对象的每个属性都要调用这个方法，深层对象需要递归调用。缺陷是不能监听属性增加和删除，不能监听数组的变化。</p>
+<p><code>proxy</code>是<code>ES6</code>的新特性解决了<code>defineProperty()</code>的通点，并且由于proxy是针对整个对象的，只需要调用一次即可，但是深层对象还是需要递归调用。</p>
+</li>
+<li><p>下一步是收集依赖。依赖项本质上就是一个表达式或者说一个函数，当变量更新时让这个表达式或函数重新执行一遍即可更新依赖项。vue定义了Watcher类来保存这个函数，get方法被触发时，说明变量被访问，这时收集一个封装好的Watcher实例即可。</p>
+</li>
+<li><p>有了依赖项，还需要一个地方来储存依赖项，它就是Dep类，他负责保存watcher实例和触发watcher更新。当set方法被触发时，说明变量更新了，我们需要通知依赖项更新，只需要在Dep中找到对应的Watcher实例，执行回调即可。</p>
+</li>
+</ul>
+<p>Vue的响应式是通过监听变量的访问和更新，也就是get和set方法实现的。</p>
+<p>当变量被访问时，将依赖项封装为一个Watcher实例并收集起来；当变量被更新时，通知所有依赖这个变量的Watcher执行回调，这些回调会通过nexttick发送到微任务队列，作为微任务执行。</p>
+<h3 id="computed和watch区别"><a href="#computed和watch区别" class="headerlink" title="computed和watch区别"></a>computed和watch区别</h3><ul>
+<li>功能上：computed是根据多个属性计算一个属性的值，watch是监听一个值的变化并执行回调</li>
+<li>使用场景上：computed常用场景是简化<code>template</code>模板中的复杂表达式，模板中不应该存在太多逻辑判断，会导致维护困难；watch的常用场景是状态变化后执行一些异步操作。</li>
+<li>如何选择：当我需要一个计算属性时，选择computed；当我需要一个监听器时，使用watch。</li>
+</ul>
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7163447762053251109?searchId=2026031719040209B57F1DADD72B85D0C3">优雅回答watch和computed的区别和选择？有人说面试造火箭，进去拧螺丝；其实个人觉得问的问题是项目中涉及的点 | - 掘金</a></p>
+</blockquote>
+<h3 id="computed和methods的区别"><a href="#computed和methods的区别" class="headerlink" title="computed和methods的区别"></a>computed和methods的区别</h3><p>computed具备缓存性，如果计算属性的依赖项没有更新，就不会重新计算，性能好。如果在模板中使用函数methods，每次渲染都会重新执行函数，性能较差。</p>
+<h3 id="组件通信的方式（父子组件、兄弟组件）"><a href="#组件通信的方式（父子组件、兄弟组件）" class="headerlink" title="组件通信的方式（父子组件、兄弟组件）"></a>组件通信的方式（父子组件、兄弟组件）</h3><p>vue3：</p>
+<ul>
+<li>props 属性：父组件传递参数给子组件，不能是深层级的子组件</li>
+<li>$emit 事件：子组件给父组件发送事件，父组件可以监听事件做一些操作。</li>
+<li>双向绑定 v-model：传递一个ref变量给子组件，如果这个值被子组件修改，对应的父组件的值也会跟着更新。</li>
+<li>透传 attributes</li>
+<li>pinia：vue的一个全局状态存储库，对于复杂一点的组件通信场景，例如兄弟组件通信、父组件和深层子组件通信，pinia比props、inject更方便更好用。</li>
+<li>插槽</li>
+<li>provide&#x2F;inject：用于父子组件通信，但是支持深层级的子组件</li>
+</ul>
+<p>vue2：todo</p>
+<h3 id="谈谈pinia？"><a href="#谈谈pinia？" class="headerlink" title="谈谈pinia？"></a>谈谈pinia？</h3><p>pinia是vue的一个全局状态存储库，基于响应式变量实现。主要功能是保存全局状态例如登录状态，以及跨组件通信。支持数据持久化和TS。</p>
+<h3 id="vue3-组合式api和-vue2-选项式api的区别"><a href="#vue3-组合式api和-vue2-选项式api的区别" class="headerlink" title="vue3 组合式api和 vue2 选项式api的区别"></a>vue3 组合式api和 vue2 选项式api的区别</h3><p>选项式API容易上手，但逻辑散乱（data变量、methods方法、computed计算属性、生命周期钩子等需要分开定义）</p>
+<p>组合式API自由度更高，代码的可读性、内聚性更强。</p>
+<h3 id="ref和reactive的区别，底层原理！！"><a href="#ref和reactive的区别，底层原理！！" class="headerlink" title="ref和reactive的区别，底层原理！！"></a>ref和reactive的区别，底层原理！！</h3><ul>
+<li>访问内部值时，<code>ref</code>需要调用.value，会多很多模板代码；而<code>reactive</code>不需要</li>
+<li><code>reactive</code>只支持对象类型，不支持string、number等原始类型；<code>ref</code>支持所有类型</li>
+<li><code>reactive</code>不会响应内部对象的整体替换；<code>ref</code>可以</li>
+</ul>
+<h3 id="为什么-ref-需要-value，而-reactive-不需要"><a href="#为什么-ref-需要-value，而-reactive-不需要" class="headerlink" title="为什么 ref 需要 .value，而 reactive 不需要"></a>为什么 ref 需要 .value，而 reactive 不需要</h3><p><code>reactive</code>直接返回代理对象，这样做有两个缺点：</p>
+<ul>
+<li>第一，只支持对象类型，不支持原始数据类型，因为不管是vue2的defineProperty还是vue3的proxy，都只支持对象类型的代理；</li>
+<li>第二，不支持整个代理对象的响应式替换。因为vue2和vue3代理的是对象，但是本质上代理的是对象的属性，监听的是属性的访问和更新。但是外层对象不是属性，所以没有响应式。怎么让它具备响应式呢，很简单，让它变成属性，怎么让他变成属性，给它外面再包装一层代理对象就行了。同时还解决了不支持基本数据类型的缺陷。但是由于ref返回的是包装对象，真实对象是他的value属性，所以访问的时候就得加上.value了。</li>
+</ul>
+<p><code>ref</code>在<code>reactive</code>的基础上包装了一层代理，解决了reactive的两个缺点，但是由于返回的是包装后的对象，真实的对象是它的value属性，我们在访问的时候就都得加上.value了。</p>
+<blockquote>
+<p>参考:<a target="_blank" rel="noopener" href="https://juejin.cn/post/7225569023828508727?searchId=2026032310464060F7DC578CB7EA9638C1#heading-7">使用Ref还是Reactive？ - 掘金</a></p>
+</blockquote>
+<h3 id="什么时候用ref？什么时候用reactive？"><a href="#什么时候用ref？什么时候用reactive？" class="headerlink" title="什么时候用ref？什么时候用reactive？"></a>什么时候用ref？什么时候用reactive？</h3><p>如果是基本数据类型，或者需要对象整体替换时的响应式，就选ref；否则ref和reactive都差不多，当我们传递一个对象给ref时，ref内部也是基于reactive实现的。</p>
+<h3 id="vue3-proxy的核心缺陷"><a href="#vue3-proxy的核心缺陷" class="headerlink" title="vue3 proxy的核心缺陷"></a>vue3 proxy的核心缺陷</h3><p>只支持对象类型的代理，不支持基本数据类型。 </p>
+<h3 id="script-setup有什么用？"><a href="#script-setup有什么用？" class="headerlink" title="script setup有什么用？"></a>script setup有什么用？</h3><h3 id="v-if-和-v-for-的优先级、"><a href="#v-if-和-v-for-的优先级、" class="headerlink" title="v-if 和 v-for 的优先级、"></a>v-if 和 v-for 的优先级、</h3><p><code>v-if</code>的优先级更高，并且<code>v-if</code>访问不到<code>v-for</code>中定义的变量</p>
+<h3 id="组件懒加载-异步组件"><a href="#组件懒加载-异步组件" class="headerlink" title="组件懒加载&#x2F;异步组件"></a>组件懒加载&#x2F;异步组件</h3><h3 id="什么是虚拟dom？有什么用？"><a href="#什么是虚拟dom？有什么用？" class="headerlink" title="什么是虚拟dom？有什么用？"></a>什么是虚拟dom？有什么用？</h3><ul>
+<li>虚拟dom是用JS对象对真实dom树的模拟，相当于在JS和真实dom之间加了一层缓存，作用是尽可能的减少dom操作，从而提高性能</li>
+<li>当状态改变了，就会重新构建一棵新的对象树，然后用新的树和旧的树进行diff对比，记录两棵树的差异</li>
+<li>再将差异转换为dom操作，应用在真实DOM树中</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903895467032589?searchId=20260429183651BBE542DD0586BC05BCE8#heading-3">深入剖析：Vue核心之虚拟DOM使用 Vue 做项目也有两年时间了，对 Vue 的 api也用的比较得心应手了，虽然对 - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6854573217462534151?searchId=2026051314431204C128A8507C7696C797">通俗易懂的vue虚拟（Virtual ）DOM和diff算法最近在看一些底层方面的知识。所以想做个系列尝试去聊聊这些比较 - 掘金</a></p>
+</blockquote>
+<h3 id="v-for-里为什么要绑定-key，为什么一般不推荐用-index-作为-key"><a href="#v-for-里为什么要绑定-key，为什么一般不推荐用-index-作为-key" class="headerlink" title="v-for 里为什么要绑定 key，为什么一般不推荐用 index 作为 key"></a>v-for 里为什么要绑定 key，为什么一般不推荐用 index 作为 key</h3><p>key是在新旧列表diff的过程中，用来判断两个节点是否是同一个节点的。如果两个节点的key和tag都相同，就会判断为同一节点，直接进行复用。</p>
+<p>如果用index作为key，在数据顺序发生变化的场景，会导致错误的复用行为，产生不必要的更新。</p>
+<p>假设这样一个场景，一个列表有1234四个数据，现在把他反转变为4321，我们期望的是旧的四个节点直接复用，但是如果把index作为key，一个都不会复用，四个节点都会被更新，然后重新渲染。因为两个列表中相同索引的节点都会判断为相同节点，都会进行复用，但是props属性不同，就会触发更新。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904113587634184?searchId=20260429181901AF86AD6E42E5710569D2#heading-3">为什么 Vue 中不要用 index 作为 key？（diff 算法详解）Vue 中的 key 是用来做什么的？为什么不 - 掘金</a></p>
+</blockquote>
+<h3 id="diff-算法原理"><a href="#diff-算法原理" class="headerlink" title="diff 算法原理"></a>diff 算法原理</h3><p>vue2：</p>
+<ul>
+<li><p>首先调用 patch 判断两个虚拟dom的根节点vnode是不是都存在：</p>
+<ul>
+<li><p>如果旧节点oldVnode存在，新节点vnode不存在，删除旧节点；</p>
+</li>
+<li><p>如果旧节点不存在，新节点存在，创建新节点；</p>
+</li>
+<li><p>对于都存在的情况：</p>
+<p>如果是同一节点（key、tag都要相同），则调用patchVnode对比子节点和节点文本；</p>
+<p>如果不是同一节点，删除旧节点，创建新节点。</p>
+</li>
+</ul>
+</li>
+<li><p>patchVnode 首先判断两个vnode的是否都有子节点：</p>
+<ul>
+<li>如果oldVnode有子节点，vnode没有子节点，删除掉所有子节点；</li>
+<li>如果oldVnode没有子节点，vnode有子节点，创建所有子节点；</li>
+<li>如果都存在子节点，调用updateChildren对比、更新新旧子节点（重点）</li>
+</ul>
+</li>
+<li><p>updateChildren会分别为新旧子节点数组创建头尾指针，然后while循环遍历直到一个列表的 startIndex&gt;endIndex。每次循环依次进行如下流程：</p>
+<ul>
+<li><p>新的头和旧的头对比，如果是相同节点，则递归调用patchVnode对比更新</p>
+</li>
+<li><p>新的尾和旧的尾对比，如果是相同节点，则递归调用patchVnode对比更新</p>
+</li>
+<li><p>新的头和旧的尾对比，如果是相同节点，则递归调用patchVnode对比更新，<strong>并且将旧尾节点插入到旧头节点之前</strong>（保证相对顺序，和新子节点保持一致）</p>
+</li>
+<li><p>新的尾和旧的头对比，如果是相同节点，则递归调用patchVnode对比更新，<strong>并且将旧头节点插入到旧尾结点之后</strong>（保证相对顺序，和新子节点保持一致）</p>
+</li>
+<li><p>如果上面的判断都未命中，则给旧子数组构建一个key -&gt; index的map，然后查找newCh[newStartIndex]（即新子节点数组的头指针指向的节点）在旧子数组中的索引：</p>
+<p>如果找到了，则递归调用patchVnode对比更新，<strong>并且将旧子数组的该节点插入到旧头结点之前</strong>（保证相对顺序，和新子节点保持一致）。</p>
+</li>
+</ul>
+</li>
+<li><p>循环结束</p>
+<ul>
+<li>如果oldStartIndex&gt;oldEndIndex，说明老列表先遍历完，添加从newStartIndex到newEndIndex的节点。</li>
+<li>如果newStartIndex&gt;newEndIndex，说明新列表先遍历完，删除从oldStartIndex到oldEndIndex的节点。</li>
+</ul>
+</li>
+</ul>
+<p>vue3中 updateChildren 的更新：</p>
+<p>举例说明：</p>
+<p>​	老的 children：<code>[ a, b, c, d, e, f, g ]</code></p>
+<p>​	新的 children：<code>[ a, b, f, c, d, e, h, g ]</code></p>
+<ul>
+<li>首先进行头头对比，发现不同旧结束，得到 <code>[ a, b ]</code></li>
+<li>再进行尾尾对比，发现不同旧结束，得到 <code>[ g ]</code></li>
+<li>保存没有比较过的新节点数组 <code>[ f, c, d, e, h ]</code>，再找到它们对应旧数组索引的数组 <code>[ 5, 2, 3, 4, -1 ]</code>，<code>-1</code> 是老数组里没有的就说明是新增</li>
+<li>再找到数组的最长递增子序列，把其他剩余节点根据这个序列进行移动&#x2F;新增&#x2F;删除</li>
+</ul>
+<p>使用最长递增子序列可以最大程度的减少 DOM 的操作次数。</p>
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7010594233253888013?searchId=20260429201610C4333DA946794712D9D0#heading-13">深入浅出虚拟 DOM 和 Diff 算法，及 Vue2 与 Vue3 中的区别深入浅出 Diff 算法，完整源码行行加注 - 掘金</a></p>
+</blockquote>
+<hr>
+<h3 id="vue2和vue3的区别"><a href="#vue2和vue3的区别" class="headerlink" title="vue2和vue3的区别"></a>vue2和vue3的区别</h3><ol>
+<li><p>vue2使用选项式api，而vue3使用组合式api。</p>
+<p>选项式api容易上手，但是逻辑散乱，因为data、method、computed需要分开定义</p>
+<p>组合式api自由度更高，代码可读性、内聚性更强</p>
+</li>
+<li><p>响应式实现原理不同</p>
+<p>vue2对于get和set方法的监听，通过<code>defineProperty()</code>实现，它的第一个缺点是监听不到属性的新增和删除；第二个缺点是不能监听数组的变化；第三个缺点是因为<code>defineProperty()</code>是针对属性的，需要给对象的每个属性调用一遍，当属性过多时可能存在性能问题。</p>
+<p>vue3基于<code>proxy</code>实现对象代理，解决了<code>defineProperty()</code>的缺点。它支持属性增删的监听，支持数组代理，同时对于同级属性，做一次代理即可，不需要重复调用。</p>
+</li>
+<li><p>diff算法的实现不同</p>
+<p>vue2首先会进行头头、尾尾、头尾、尾头比较，命中直接复用，都没命中就去旧节点列表遍历，命中就复用，还没命中说明是新节点，就新建一个节点。</p>
+<p>vue3首先进行头头、尾尾比较。对于剩余的节点，如果只有新节点有剩余，就直接创建；如果只有旧节点有剩余，就直接删除。如果新旧都有剩余，那就先拿到新节点在旧节点数组中的下标，得到一个下标数组，再找到这个下标数组的最长递增子序列，在这个序列里的节点直接复用，剩余的节点进行移动&#x2F;插入&#x2F;删除。</p>
+<p>使用最长递增子序列可以最大程度的减少 DOM 的操作次数。</p>
+</li>
+</ol>
+<blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7340676808436563987?searchId=20260502134435753E0E67BEE67BA4DBC8">vue3和vue2的区别，你知道多少一. 根节点不同 vue2中必须要有根标签。 vue3中可以没有根标签，。 二. 组 - 掘金</a></p>
+</blockquote>
+<h3 id="请你介绍一下vue的diiff算法"><a href="#请你介绍一下vue的diiff算法" class="headerlink" title="请你介绍一下vue的diiff算法"></a>请你介绍一下vue的diiff算法</h3><p>首先要说明的是，vue的diff算法只会对比同级节点。</p>
+<p>因为我们在实际开发中很少跨层级移动节点，并且跨层级的diff时间复杂度会特别高，得不偿失。</p>
+<p>然后我来介绍一下同级diff的过程：</p>
+<p>首先为新旧两个节点数组创建头尾指针。</p>
+<p>然后先进行头头对比，尾尾对比，头尾对比，尾头对比。</p>
+<p>如果命中就直接复用；都没命中，再判断旧节点数组中是否有和新头指针指向的节点相同的节点（根据旧节点数组构建一个key-&gt;index的map，然后拿节点的key去map查找），如果有就直接复用</p>
+<hr>
+<h3 id="v-if和v-show的区别"><a href="#v-if和v-show的区别" class="headerlink" title="v-if和v-show的区别"></a>v-if和v-show的区别</h3><p>v-if是真实按照条件渲染元素的，当条件变化时，会销毁和创建元素；而v-show只是通过css的display属性更改元素的可见性，</p>
+<hr>
+<h2 id="计网"><a href="#计网" class="headerlink" title="计网"></a>计网</h2><h3 id="抓包工具"><a href="#抓包工具" class="headerlink" title="抓包工具"></a>抓包工具</h3><h3 id="从输入url到看到页面的过程"><a href="#从输入url到看到页面的过程" class="headerlink" title="从输入url到看到页面的过程"></a>从输入url到看到页面的过程</h3><ol>
+<li>浏览器解析URL，把域名发送给DNS服务器，解析为对应的IP地址。</li>
+<li>三次握手，和服务器建立TCP连接</li>
+<li>浏览器发送http请求</li>
+<li>服务器收到请求，将响应结果发送给浏览器</li>
+<li>最后浏览器收到响应结果，解析html，下载所需的CSS、JavaScript资源。然后根据这些资源渲染界面。</li>
+</ol>
+<h3 id="HTTP请求报文和响应报文的组成"><a href="#HTTP请求报文和响应报文的组成" class="headerlink" title="HTTP请求报文和响应报文的组成"></a>HTTP请求报文和响应报文的组成</h3><p>请求报文：</p>
+<ul>
+<li>请求行：包括请求方式、url、协议版本</li>
+<li>请求头</li>
+<li>请求体（只有post请求有）</li>
+</ul>
+<img src="D:\typora-images\162db6358082ff05tplv-t2oaga2asx-jj-mark3024000q75.png" alt="img"  />
+
+<p>响应报文：</p>
+<ul>
+<li>响应行：状态码</li>
+<li>响应头</li>
+<li>响应体</li>
+</ul>
+<p><img src="D:\typora-images\162db635806ca887tplv-t2oaga2asx-jj-mark3024000q75.png" alt="img"></p>
+<h3 id="Get和Post请求的区别"><a href="#Get和Post请求的区别" class="headerlink" title="Get和Post请求的区别"></a>Get和Post请求的区别</h3><ul>
+<li>定义和规范上的区别（本质区别），GET 请求是用来获取资源的，也就是进行查询操作的；而 POST 请求是用来修改服务器资源的，也是就用来进行增删改操作的。</li>
+<li>请求参数：get请求的参数暴露在url中，长度有限制，存在安全隐患；post请求参数存储在请求体中，没有长度限制，相对安全</li>
+<li>缓存：get请求默认会被缓存，post请求默认不缓存，除非响应头包含缓存相关字段例如<code>Expires</code>、<code>Cache-Control</code></li>
+<li>历史记录不同：get请求的参数会保存在历史记录，post请求则不会。</li>
+</ul>
+<h3 id="tcp和udp的区别"><a href="#tcp和udp的区别" class="headerlink" title="tcp和udp的区别"></a>tcp和udp的区别</h3><ul>
+<li>tcp是面向连接的协议，udp是无连接的</li>
+<li>tcp提供可靠的数据传输，udp不保证数据传输的可靠性</li>
+<li>tcp只能一对一通信，udp支持一对一、一对多、多对多通信。</li>
+<li>tcp适合要求可靠传输的场景，例如文件传输；udp适合实时应用。</li>
+</ul>
+<h3 id="简述tcp三次握手和四次挥手的过程"><a href="#简述tcp三次握手和四次挥手的过程" class="headerlink" title="简述tcp三次握手和四次挥手的过程"></a>简述tcp三次握手和四次挥手的过程</h3><p><u>三次握手</u>：</p>
+<ol>
+<li><p>第一次握手：客户端向服务端发送 SYN 请求报文段（设置一个随机序列号seq&#x3D;x），表示希望建立连接</p>
+</li>
+<li><p>第二次握手：服务器收到SYN报文段之后，回应一个确认报文，并设置 SYN（seq&#x3D;y） 和 ACK标志位（ACK标志位的序列号为ack&#x3D;x+1）报文给客户端</p>
+</li>
+<li><p>第三次握手：客户端收到服务端的确认报文后，回应一个 ACK（ack&#x3D;y+1） 报文</p>
+</li>
+</ol>
+<p><u>为什么是3次，不是4次或2次？</u></p>
+<p>答：因为TCP连接的双方都是全双工的，全双工是指既要发送又要接受数据。这就要求TCP协议要确认双方的收发数据的能力。2次握手验证不全，3次握手能完成的事没必要多做一次，所以既不是2次也不是4次。</p>
+<p><u>四次挥手</u>：</p>
+<ol>
+<li>第一次挥手，客户端向服务端请求断开连接</li>
+<li>第二次挥手，服务端向客户端发出确认报文，同时进入等待关闭状态，通知上层应用连接即将关闭，作好相应准备</li>
+<li>第三次挥手，服务器将剩余数据发送完后，服务端向客户端发送FIN报文，请求断开连接</li>
+<li>第四次挥手客户端向服务端发出确认报文，客户端进入TIME-WAIT（时间等待）状态，防止服务端未收到确认报文而无法进入关闭状态，等待一段时间（2*MSL（最长报文段寿命））后进入关闭状态，服务端在接收到客户端的确认报文后也进入关闭状态，随后连接断开。</li>
+</ol>
+<p><u>为什么第四次挥手后客户端没有立刻进入关闭状态，而是等待了一段时间？</u></p>
+<p>答：防止确认报文丢失，服务端无法正常关闭。如果报文丢失，服务端一段时间后会再次发送请求断开连接的FIN报文，如果客户端没有等待直接关闭，就收不到这个，导致服务端无法正常关闭。</p>
+<h3 id="TCP-IP五层网络模型包括哪几层"><a href="#TCP-IP五层网络模型包括哪几层" class="headerlink" title="TCP&#x2F;IP五层网络模型包括哪几层"></a>TCP&#x2F;IP五层网络模型包括哪几层</h3><p>从上至下依次是：</p>
+<ul>
+<li>应用层：应用程序。</li>
+<li>传输层：通过 TCP 协议为上层协议提供可靠的端到端传输</li>
+<li>网络层：通过IP协议进行寻址和路由</li>
+<li>数据链路层：负责将数字信号在物理通道中准确传输</li>
+<li>物理层：物理传输介质，为上层协议提供物理连接</li>
+</ul>
+<h3 id="HTTP有哪些状态码，分别代表什么意思"><a href="#HTTP有哪些状态码，分别代表什么意思" class="headerlink" title="HTTP有哪些状态码，分别代表什么意思"></a>HTTP有哪些状态码，分别代表什么意思</h3><ol>
+<li>2xx（成功）<ul>
+<li><strong>200 OK</strong>：请求成功。</li>
+</ul>
+</li>
+<li>3xx（重定向）<ul>
+<li><strong>301 Moved Permanently</strong>：请求的资源已被永久移动到新的URL上。</li>
+<li><strong>304 Not Modified</strong>：资源没变化，缓存可以继续使用。</li>
+</ul>
+</li>
+<li>4xx（客户端错误）<ul>
+<li><strong>400 Bad Request</strong>：请求格式有问题。</li>
+<li><strong>401 Unauthorized</strong>：需要进行身份验证。</li>
+<li><strong>403 Forbidden</strong>：服务器理解请求，但拒绝执行它。</li>
+<li><strong>404 Not Found</strong>：服务器无法找到请求的资源。</li>
+</ul>
+</li>
+<li>5xx（服务器内部错误）</li>
+</ol>
+<h3 id="https如何保证安全性"><a href="#https如何保证安全性" class="headerlink" title="https如何保证安全性"></a>https如何保证安全性</h3><p>https就是在http的基础上，添加了TLS协议用于认证和加密。在真正请求开始之前，</p>
+<ul>
+<li>首先浏览器会请求服务器的数字证书，证书由CA颁发</li>
+<li>浏览器验证证书有效性，然后用对称加密算法生成秘钥，再用证书的公钥加密秘钥发送给服务器（因为私钥只有服务器持有，对称密钥无法被劫持）</li>
+<li>服务器用私钥解密出对称密钥，随后双方用对称密钥加密数据，进行通信。</li>
+</ul>
+<h3 id="介绍一下SSE"><a href="#介绍一下SSE" class="headerlink" title="介绍一下SSE"></a>介绍一下SSE</h3><p>SSE（Server-Sent Events）是实现服务器向客户端单向推送数据的技术，它基于http协议，但是会建立长连接，和传统的请求—相应模式不同。</p>
+<h3 id="SSE和WebSocket的区别"><a href="#SSE和WebSocket的区别" class="headerlink" title="SSE和WebSocket的区别"></a>SSE和WebSocket的区别</h3><ol>
+<li>协议不同：sse基于http协议实现，而websocket本身是一个新的协议</li>
+<li>通信方式不同：sse只支持服务端向客户端推送消息，而websocket支持双向通信</li>
+<li>断线重连机制不同：sse默认支持断线重连，而websocket需要自己实现</li>
+<li>websocket整体较重；sse更轻量化，简单易用</li>
+</ol>
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7424908830902042658?searchId=202604301936494137F228A23860A0B6CB#heading-2">还在用轮询、websocket查询大屏数据？sse用起来轮询、websocket、sse大对比以及使用场景的区别。sse - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7451991754561880115?searchId=202604301936494137F228A23860A0B6CB#heading-4">WebSocket太笨重？试试SSE的轻量级魅力！一、 前言 Hello~ 大家好。我是秋天的一阵风~ 关注我时间长一点 - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7492640608206487562?searchId=202604301936494137F228A23860A0B6CB">在线人数实时推送？WebSocket 太重，SSE 正合适 🎯🎯🎯有些项目要统计在线人数，其实更多是为了“营造热闹 - 掘金</a></p>
+</blockquote>
+<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><h3 id="浏览器渲染过程，重排重绘"><a href="#浏览器渲染过程，重排重绘" class="headerlink" title="浏览器渲染过程，重排重绘"></a>浏览器渲染过程，重排重绘</h3><ul>
+<li>浏览器的绘制流程：</li>
+</ul>
+<ol>
+<li>解析HTML，构建DOM树</li>
+<li>解析CSS，构建CSSOM树</li>
+<li>将DOM和CSSOM合并成渲染树</li>
+<li>根据渲染树来布局，计算每个节点的尺寸和位置</li>
+<li>调用GPU绘制在屏幕上</li>
+</ol>
+<ul>
+<li><p>重排&#x2F;回流：</p>
+<p>重新确定DOM节点的尺寸和位置。当DOM的尺寸、位置发生变化或者增删时，就会触发重排。</p>
+<p>比如当width、padding、margin、left、top等属性更改，就会触发重排。</p>
+</li>
+<li><p>重绘：</p>
+<p>重新计算样式树，并绘制在屏幕上。</p>
+<p>当页面的样式发生改变时，就会触发重绘。比如当color、background-color、visibility等属性更改时，就会触发重绘。</p>
+<p>重排一定会触发重绘，重绘不一定触发重排。</p>
+</li>
+<li><p>如何减少重排、重绘操作</p>
+<p>重排、重绘操作会阻塞主线程，当耗时过长时会造成页面卡顿。通过以下方式减少重排、重绘：</p>
+<ul>
+<li><p>读写 <code>offset</code>族、<code>scroll</code>族和<code>client</code>族属性的时候，会强制队列（大多数浏览器都会通过队列优化批量修改的场景）刷新，触发重排操作。</p>
+<p>不要重复获取这类属性，最好缓存起来。</p>
+</li>
+<li><p>多用<code>transform</code>实现动画，<code>transform</code>不会触发重排重绘</p>
+</li>
+<li><p>使用cssText或css class优化批量修改css操作。</p>
+</li>
+<li><p>离线修改DOM。批量修改DOM前，先通过<code>display: none</code>让元素脱离文档流，再批量修改DOM，最后让元素回到文档流。</p>
+</li>
+<li><p>现代浏览器已经通过队列优化批量修改的场景，cssText、离线DOM修改主要是针对老版本的优化。</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/Performance/Guides/How_browsers_work">渲染页面：浏览器的工作原理 - Web 性能 | MDN</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6847902222349500430?searchId=20260520190442A6172F2CEA963D77C69C#heading-34">「浏览器工作原理」写给女友的秘籍-渲染流程篇（1.1W字）想要成为一名合格的前端工程师，掌握相关浏览器的工作原理是必备的 - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903779700047885?searchId=2026052217103322AB1AE6785B3DB9921A#heading-5">你真的了解回流和重绘吗本文先从浏览器的渲染过程来从头到尾的讲解一下回流重绘，如果大家想直接看如何减少回流和重绘，优化性能 - 掘金</a></p>
+</blockquote>
+<h3 id="HTTP-缓存相关"><a href="#HTTP-缓存相关" class="headerlink" title="HTTP 缓存相关"></a>HTTP 缓存相关</h3><ul>
+<li><p>HTTP请求的缓存过程</p>
+<p>浏览器第一次发起请求后，根据响应头的一些参数例如<code>Expires</code>、<code>Cache-Control</code>决定是否缓存，是则将请求结果（js、css文件、图片等）和缓存头存到浏览器缓存中。</p>
+</li>
+<li><p>什么是强缓存、协商缓存？</p>
+<p>强缓存：在有效时间内，浏览器直接读取本地缓存，不向服务器发送任何请求。</p>
+<p>协商缓存：强制缓存失效，浏览器附带缓存标识（请求头附加<code>Last-Modified / If-Modified-Since</code>和<code>Etag / If-None-Match</code>）向服务器发送请求，服务器根据缓存标识决定缓存是否可用的过程，如果可用则返回304，不可用则返回200和新的请求结果。</p>
+</li>
+<li><p>强缓存、协商缓存分别有什么应用场景？</p>
+</li>
+<li><p>浏览器的内存缓存和硬盘缓存</p>
+<p>内存缓存（from memory cache）：直接存入标签页进程的内存中，标签页关闭缓存消失，内存缓存一般存放js和图片等文件。</p>
+<p>硬盘缓存（(rom disk cache）：存入硬盘文件，关闭标签也不会消失，css文件会缓存到硬盘。</p>
+</li>
+</ul>
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903593275817998#heading-6">彻底理解浏览器的缓存机制浏览器的缓存机制也就是我们说的HTTP缓存机制，其机制是根据HTTP报文的缓存标识进行的，所以在 - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903838768431118#heading-1">http面试必会的：强制缓存和协商缓存1. 什么是缓存？ http缓存机制主要在http响应头中设定，响应头中相关字段为 - 掘金</a></p>
+</blockquote>
+<h3 id="前端的存储方式，Local-Storage和Session-Storage区别"><a href="#前端的存储方式，Local-Storage和Session-Storage区别" class="headerlink" title="前端的存储方式，Local Storage和Session Storage区别"></a>前端的存储方式，Local Storage和Session Storage区别</h3><ul>
+<li><p>sessionStorage：会话存储</p>
+<ul>
+<li>存储期限：只在当前标签页下有效，当标签页关闭时，存储的数据就会被删除。</li>
+<li>存储容量：约5MB</li>
+<li>用途：用于存储临数据例，例如表单数据</li>
+</ul>
+</li>
+<li><p>localStorage：本地存储</p>
+<ul>
+<li>存储期限：存储在磁盘中，除非用户主动删除，否则数据会一直存在。</li>
+<li>存储容量：约5MB</li>
+<li>用途：用于持久化存储数据，例如用户信息、主题等</li>
+</ul>
+</li>
+<li><p>cookies：通过key-value格式存储数据的小型文本文件。可以设置过期时间，如果不设置，在会话结束后被删除</p>
+<ul>
+<li>存储期限：可以设置过期时间，如果不设置，会话结束时被删除。</li>
+<li>存储容量：约4kb，每个域名最多存储20个cookie</li>
+<li>用途：用于存储少量的，随请求一起发送给服务器的数据，例如sessionid</li>
+</ul>
+</li>
+<li><p>IndexedDB</p>
+<p>非关系型数据库，数据存储在磁盘中。存储容量很大，可以存储数百mb或者更多。支持存储对象、数据等结构化数据。适合存储大量数据的场景。</p>
+</li>
+</ul>
+<h3 id="本地持久化为何选择localStorage？localStorage、sessionStorage、cookie的适用场景"><a href="#本地持久化为何选择localStorage？localStorage、sessionStorage、cookie的适用场景" class="headerlink" title="本地持久化为何选择localStorage？localStorage、sessionStorage、cookie的适用场景"></a>本地持久化为何选择localStorage？localStorage、sessionStorage、cookie的适用场景</h3><p>因为localStorage支持数据持久化，除非手动删除否则不会清除。</p>
+<ul>
+<li>当需要存储临时数据，例如表单时，使用sessionStorage；</li>
+<li>当需要存储持久化数据，例如用户登录信息、主题，使用localStorage；</li>
+<li>当需要存储少量，随请求发送给服务器的数据时，例如会话id，使用cookie；</li>
+<li>当存储大量数据，其他存储方式的容量不满足时，使用IndexedDB。</li>
+</ul>
+<h3 id="什么时候用localstorage，什么时候用indexedDB"><a href="#什么时候用localstorage，什么时候用indexedDB" class="headerlink" title="什么时候用localstorage，什么时候用indexedDB"></a>什么时候用localstorage，什么时候用indexedDB</h3><p>数据量小于5mb时用localStorage，大于用indexedDB</p>
+<blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/tegou/p/18948092">前端浏览器常用的五种存储方式 - tegou - 博客园</a></p>
+</blockquote>
+<h3 id="什么是跨域，跨域中的options是什么？"><a href="#什么是跨域，跨域中的options是什么？" class="headerlink" title="什么是跨域，跨域中的options是什么？"></a>什么是跨域，跨域中的options是什么？</h3><ul>
+<li><p>什么是跨域？</p>
+<p>一个url由<strong>协议</strong>、<strong>域名</strong>、<strong>端口</strong>三个部分组成：<code>http://localhost:8080</code>。当一个请求的url和当前页面的url有任意一个部分不同，就是跨域。</p>
+<p>默认情况下浏览器不允许发送跨域请求，在服务端设置相应的响应头来解决跨域问题。</p>
+</li>
+<li><p>为什么会存在跨域</p>
+<p>因为浏览器的同源策略，默认情况下只允许访问协议域名端口相同的url，目的是提高安全性，防止xss等跨站请求攻击。</p>
+</li>
+<li><p>options请求：预检请求</p>
+<p>预检请求是浏览器在执行某些跨域请求之前，先发送的一种特殊的 HTTP 请求，目的是询问服务端是否允许跨域，以及允许哪些请求方法、请求头等。</p>
+</li>
+<li><p>options请求过多带来的问题</p>
+<p>主要是性能问题，大量的options请求会增加网络延迟和服务器负担。</p>
+</li>
+<li><p>如何减少options请求？</p>
+<ul>
+<li>尽量使用“简单请求”</li>
+<li>限制自定义请求头的使用</li>
+</ul>
+</li>
+<li><p>什么是简单请求？</p>
+<p>请求方法为GET、POST或HEAD。且只包含特定的几个请求头，并且不包含自定义请求头</p>
+</li>
+<li><p>跨域的表现是什么，请求无响应还是根本没发？</p>
+<p>请求正常发送，服务器正常响应，只是被浏览器拦截了，控制台会提示你违反了跨域策略。</p>
+</li>
+</ul>
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7403185402347159588?searchId=20260317150654A291DD907BF6FA52136A#heading-6">面试官：如何减少 options 请求想要回答这个问题需要先明白什么是简单请求和非简单请求 简单请求 简单请求你可以理解 - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7094162429310926855?searchId=20260513124824A4AC78B32A30F888697E#heading-1">前端面试必会网络之跨域问题解决浏览器有一个重要的同源策略，源&#x3D;协议+主机+端口 大部分的跨域问题，都是通过代理解决的 要 - 掘金</a></p>
+</blockquote>
+<h3 id="跨域的解决方案"><a href="#跨域的解决方案" class="headerlink" title="跨域的解决方案"></a>跨域的解决方案</h3><ol>
+<li>在服务端配置CORS（<strong>C</strong>ross-<strong>O</strong>rigin <strong>R</strong>esource <strong>S</strong>haring），具体是指在请求头添加<code>Access-Control-Allow-Origin</code>字段，表示允许哪些源访问</li>
+<li>在vue.config里配置开发服务器代理，将请求转发到后端的域名。</li>
+</ol>
+<h3 id="客户端、代理和反向代理"><a href="#客户端、代理和反向代理" class="headerlink" title="客户端、代理和反向代理"></a>客户端、代理和反向代理</h3><h3 id="如何解析url的query参数，讲思路"><a href="#如何解析url的query参数，讲思路" class="headerlink" title="如何解析url的query参数，讲思路"></a>如何解析url的query参数，讲思路</h3><h3 id="axios，websocket，SSE区别是什么"><a href="#axios，websocket，SSE区别是什么" class="headerlink" title="axios，websocket，SSE区别是什么"></a>axios，websocket，SSE区别是什么</h3><h3 id="浏览器的事件冒泡和事件委托"><a href="#浏览器的事件冒泡和事件委托" class="headerlink" title="浏览器的事件冒泡和事件委托"></a>浏览器的事件冒泡和事件委托</h3><p>事件冒泡是指嵌套元素触发浏览器的事件（例如鼠标、键盘的点击事件）时，最里面的元素最先触发，然后外层元素依次触发，就像事件从最里层的元素冒泡而出一样。</p>
+<p>事件捕获：和事件冒泡的方向相反。</p>
+<p>事件委托：利用事件冒泡机制，假设一个父元素有很多子元素，如果我们想给所有子元素设置监听器，可以直接给父元素设置监听器，避免编写重复代码。	</p>
+<h3 id="宏任务和微任务分别有哪些"><a href="#宏任务和微任务分别有哪些" class="headerlink" title="宏任务和微任务分别有哪些"></a>宏任务和微任务分别有哪些</h3><p>宏任务：</p>
+<ul>
+<li>外层同步代码</li>
+<li>setTimeout、setInterval</li>
+</ul>
+<p>微任务：</p>
+<ul>
+<li>promise的then或catch</li>
+<li>MutationObserver（vue更新dom）</li>
+</ul>
+<hr>
+<h2 id="前端性能优化"><a href="#前端性能优化" class="headerlink" title="前端性能优化"></a>前端性能优化</h2><blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7188894691356573754?searchId=20260304145337C4609A28AC379C320A28#heading-22">前端性能优化——首页资源压缩63%、白屏时间缩短86%提升首屏的加载速度，是前端性能优化中最重要的环节，这里笔者梳理出一 - 掘金</a></p>
+</blockquote>
+<h3 id="监测性能的指标有哪些？"><a href="#监测性能的指标有哪些？" class="headerlink" title="监测性能的指标有哪些？"></a>监测性能的指标有哪些？</h3><ul>
+<li><strong>FCP（First Contentful Paint）</strong>：首屏加载时间，即浏览器绘制出第一个元素的时间。</li>
+<li><strong>LCP（Largest Contentful Paint）</strong>：最大内容绘制时间，视口内可见的最大元素绘制完成的时间，代表用户视觉感知的页面加载速度。</li>
+<li>**DCL（DOMContentLoaded）：**DOM解析完毕所需时间。</li>
+<li><strong>INP (Interaction to Next Paint)</strong> ：从用户交互到下一次绘制的时间，用于衡量用户交互的延迟。</li>
+<li>用户可交互时间 <strong>TTI（Time to Interactive）</strong>：页面加载完成并且用户能够与页面进行交互的时间点。</li>
+<li>累计布局偏移 <strong>CLS（Cumulative Layout Shift）</strong>：意外的布局偏移，用于衡量页面的视觉稳定性。（偏向用户体验，而非性能）</li>
+</ul>
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7273119689185673253?searchId=202603261035439A5486A49F5A783BDE94">前端铜九铁十面试必备八股文——性能优化图片懒加载原理 图片懒加载也叫延迟加载，只加载当前屏幕的图片，可视区域外的图片不会 - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://web.developers.google.cn/articles/cls?hl=zh-cn">Cumulative Layout Shift (CLS)  | Articles  | web.dev for China</a></p>
+</blockquote>
+<h3 id="对性能优化有了解吗？你是怎么做性能优化的？"><a href="#对性能优化有了解吗？你是怎么做性能优化的？" class="headerlink" title="对性能优化有了解吗？你是怎么做性能优化的？"></a>对性能优化有了解吗？你是怎么做性能优化的？</h3><p>我了解的性能优化方式分为以下几个方面：</p>
+<ul>
+<li>首先是代码分块，通过路由懒加载、组件懒加载，搭配webpack、vite等打包工具的配置实现资源拆分，避免打包后的JS文件过大，加载速度过慢。</li>
+<li>然后是tree-shaking，可以消除掉无用代码，目的也是减小JS文件的体积。</li>
+<li>第三个是图片优化：高分辨率的图片体积很大，如果一个网页图片过多，加载速度可能会很慢，可以通过图片压缩和懒加载进行优化。</li>
+<li>最后是列表优化：列表项过多会产生过多的dom节点，影响dom解析和渲染的速度，通过虚拟列表进行优化。</li>
+</ul>
+<h3 id="长列表优化"><a href="#长列表优化" class="headerlink" title="长列表优化"></a>长列表优化</h3><ul>
+<li><p>列表项定高的虚拟列表</p>
+</li>
+<li><p>不定高的虚拟列表</p>
+</li>
+<li><p>列表懒加载（缺点：1.很难定位到某个位置的条目，2.滚动条不能正确表示条目在整个列表中的位置，3.一直加载到底，还是会出现过多的dom节点）</p>
+</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7415663559310540827?searchId=20260503135151AB0E974F19FBF529F8FB#heading-4">Vue3 封装不定高虚拟列表 hooks，复用性更好！Vue3 封装不定高虚拟列表 hooks，提高复用性，支持第三方库 - 掘金</a></p>
+</blockquote>
+<h3 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h3><p>对于SPA项目，项目打包后，会把所有页面打包成一个文件，JS文件会很大。用户打开网站会一次性加载所有资源，首屏加载会很慢。</p>
+<p>修改webpack、vite等打包工具的配置实现代码分块，配合路由懒加载，即可实现页面资源的懒加载。</p>
+<ul>
+<li>懒加载的前提：ES6的动态加载模块——<code>import()</code></li>
+</ul>
+<h3 id="组件懒加载"><a href="#组件懒加载" class="headerlink" title="组件懒加载"></a>组件懒加载</h3><p>某些组件例如弹窗组件不是一进入页面就展示，而是需要用户手动触发才显示出来，这种情况可以使用组件懒加载。</p>
+<p>和路由懒加载的目的一样，都是为了资源拆分，减少JS文件的体积来提高加载速度。</p>
+<p>适用场景：</p>
+<ul>
+<li>组件不是刚进入页面就加载，并且页面的JS文件体积很大，影响加载速度。</li>
+<li>组件复用性高，很多页面都有引入，利用组件懒加载抽离出该组件，可以更好地利用缓存。</li>
+</ul>
+<p>注意，有时资源拆分的过细也不好，会造成浏览器http请求过多。</p>
+<h3 id="JS的加载方式"><a href="#JS的加载方式" class="headerlink" title="JS的加载方式"></a>JS的加载方式</h3><ul>
+<li>普通脚本：浏览器遇到<code>&lt;script&gt;</code>标签，会同步加载和执行JS脚本，阻塞dom的解析和渲染。</li>
+<li>async模式：异步加载脚本，不会阻塞dom解析。加载完会立即执行脚本（执行是同步的，会阻塞dom解析）</li>
+<li>defer模式：异步加载脚本，不会阻塞dom解析。在文档被解析、渲染后执行，适合依赖dom的脚本。</li>
+<li><code>type: module</code>：表示ES模块，ES6引入。行为等同于<code>defer</code>，如果设置了<code>async</code>属性，那脚本在加载完会立即执行。（vite会把所有非ES模块编译为ES模块）</li>
+</ul>
+<h3 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h3><p>如果一个网页的图片过多，会导致加载速度变慢，解决方式：</p>
+<ul>
+<li>图片压缩：原图和压缩后的图片体积差距非常大，但是效果差距不大。通过裁剪和压缩图片降低图片体积，提高加载速度。</li>
+<li>图片懒加载。许多图片可能在页面的底部，未出现在视口中，不需要一开始全部加载完。</li>
+</ul>
+<h3 id="如何实现图片懒加载"><a href="#如何实现图片懒加载" class="headerlink" title="如何实现图片懒加载"></a>如何实现图片懒加载</h3><blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/liyunxi/p/16699184.html">前端必会的图片懒加载(三种方式) - 李云蹊 - 博客园</a></p>
+</blockquote>
+<ul>
+<li><p><u>图片懒加载的必要性</u></p>
+<p>当我们访问一个网页时，过多的图片会导致页面加载速度变慢，费了许多力气把所有图片加载完后用户可能早已离开。另一方面，许多图片可能在页面的底部，未出现在视口中，用户根本就没看到，为了加载这些图片白白浪费了性能。</p>
+</li>
+<li><p><u>实现懒加载</u></p>
+<p>第一种方式：JS</p>
+<p>将img标签的src属性设置为loading图&#x2F;缺省图，然后设置img标签的自定义属性data-src为要加载的图片地址。再通过js监听窗口滑动，如果图片出现在可视区，就加载图片，即将img的src属性赋值为data-src的值。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-src</span>=<span class="string">&quot;img/1.jpg&quot;</span> <span class="attr">src</span>=<span class="string">&quot;img/0.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;xxx&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-src</span>=<span class="string">&quot;img/2.jpg&quot;</span> <span class="attr">src</span>=<span class="string">&quot;img/0.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;xxx&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-src</span>=<span class="string">&quot;img/3.jpg&quot;</span> <span class="attr">src</span>=<span class="string">&quot;img/0.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;xxx&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-src</span>=<span class="string">&quot;img/4.jpg&quot;</span> <span class="attr">src</span>=<span class="string">&quot;img/0.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;xxx&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-src</span>=<span class="string">&quot;img/5.jpg&quot;</span> <span class="attr">src</span>=<span class="string">&quot;img/0.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;xxx&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-src</span>=<span class="string">&quot;img/6.jpg&quot;</span> <span class="attr">src</span>=<span class="string">&quot;img/0.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;xxx&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-src</span>=<span class="string">&quot;img/7.jpg&quot;</span> <span class="attr">src</span>=<span class="string">&quot;img/0.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;xxx&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">data-src</span>=<span class="string">&quot;img/8.jpg&quot;</span> <span class="attr">src</span>=<span class="string">&quot;img/0.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;xxx&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取全部img标签</span></span><br><span class="line"><span class="keyword">var</span> images = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;img&quot;</span>);</span><br><span class="line"> </span><br><span class="line"> <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;scroll&quot;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//当发生滚动事件时调用ergodic事件</span></span><br><span class="line">    <span class="title function_">ergodic</span>();</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">ergodic</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// 遍历每一张图</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> images) &#123;</span><br><span class="line">      <span class="comment">//判断当前图片是否在可视区内</span></span><br><span class="line">      <span class="keyword">if</span> (i.<span class="property">offsetTop</span> &lt;= <span class="variable language_">window</span>.<span class="property">innerHeight</span> + <span class="variable language_">window</span>.<span class="property">scrollY</span>) &#123;</span><br><span class="line">          <span class="comment">//获取自定义data-src属性的值</span></span><br><span class="line">          <span class="keyword">let</span> trueSrc = i.<span class="title function_">getAttribute</span>(<span class="string">&quot;data-src&quot;</span>);</span><br><span class="line">          <span class="comment">//把值赋值给图片的src属性</span></span><br><span class="line">          i.<span class="title function_">setAttribute</span>(<span class="string">&quot;src&quot;</span>, trueSrc);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//没发生滚动事件时也要先执行一次</span></span><br><span class="line">  <span class="title function_">ergodic</span>();</span><br></pre></td></tr></table></figure>
+
+<p>第二种方式（优）：Intersection Observer</p>
+<p>Intersection Observer的作用是观察目标元素是否可见（出现在视口中）。当目标元素出现或消失在视口中时，会调用回调函数。当img标签第一次可见时，加载图片，然后取消订阅，即可实现懒加载。</p>
+</li>
+</ul>
+<h3 id="tree-shaking：减少代码体积。函数式编程"><a href="#tree-shaking：减少代码体积。函数式编程" class="headerlink" title="tree-shaking：减少代码体积。函数式编程"></a>tree-shaking：减少代码体积。函数式编程</h3><p>tree-shaking的作用：消除无用的JS代码，减小代码体积。</p>
+<ul>
+<li>tree-shaking的底层原理：根据ES6的模块依赖进行静态分析。因为ES6的模块依赖是确定的，和运行时状态无关；ES6之前的模块化，例如CommonJS是动态加载，只有执行后才知道依赖的是什么模块，就不能做静态分析。（todo：复习ES6和CommonJS区别）</li>
+<li>函数式编程可以很好的利用tree-shaking削减代码体积。因为函数式编程低藕合。例子参见<a target="_blank" rel="noopener" href="https://juejin.cn/post/7188894691356573754?searchId=20260304145337C4609A28AC379C320A28#heading-5">前端性能优化—掘金</a>。</li>
+</ul>
+<h3 id="动画优化：requestAnimationFrame"><a href="#动画优化：requestAnimationFrame" class="headerlink" title="动画优化：requestAnimationFrame"></a>动画优化：requestAnimationFrame</h3><h3 id="项目中使用-Web-Worker-的主要作用是什么？"><a href="#项目中使用-Web-Worker-的主要作用是什么？" class="headerlink" title="项目中使用 Web Worker 的主要作用是什么？"></a>项目中使用 Web Worker 的主要作用是什么？</h3><h3 id="SPA项目首屏加载慢的原因"><a href="#SPA项目首屏加载慢的原因" class="headerlink" title="SPA项目首屏加载慢的原因"></a>SPA项目首屏加载慢的原因</h3><ul>
+<li>JavaScript文件体积过大加载太慢，或者逻辑复杂执行太慢：通过路由懒加载等方式分割代码。</li>
+<li>网络请求过多或者网络有延迟：减少数据请求</li>
+<li>图片太多加载慢：图片压缩、图片懒加载</li>
+<li>过多的渲染和重绘操作，例如DOM节点过多，DOM操作过多导致重绘过多：尽量减少DOM操作、使用虚拟列表避免过多的DOM节点。</li>
+</ul>
+<h3 id="讲一下你虚拟列表的整体实现思路，vue-virtual-list的实现思路"><a href="#讲一下你虚拟列表的整体实现思路，vue-virtual-list的实现思路" class="headerlink" title="讲一下你虚拟列表的整体实现思路，vue-virtual-list的实现思路"></a>讲一下你虚拟列表的整体实现思路，vue-virtual-list的实现思路</h3><ul>
+<li><p>我这个组件整体由三个部分组成，从外到内依次是：</p>
+<ol>
+<li>列表容器：最外层容器，表示列表的可见区域。</li>
+<li>滑动容器：高度为所有子项的高度和，目的是在只渲染部分列表项的情况下模拟滑动</li>
+<li>偏移容器：所有实际渲染子项的父容器</li>
+</ol>
+<p>因为列表项高度不固定，所以在首次加载时渲染全部数据，再将高度进行缓存。然后通过监听滑动事件，根据scrollTop计算（从第一个列表项开始累加高度，直到第一次超过scrollTop，此时的索引就是起始索引）出要渲染数据的头尾索引。这是我的实现思路。</p>
+</li>
+<li><p>我这个组件的核心思想是在组件第一次加载的时候，也就是onMounted钩子里面渲染所有列表项，把每个子项的高度缓存起来；</p>
+<p>再监听列表容器的scroll事件，根据scrollTop和缓存的高度计算当前屏幕要渲染数据的开始和结束索引。</p>
+</li>
+</ul>
+<h3 id="利用-Chrome-Dev-Tools-进行页面性能分析"><a href="#利用-Chrome-Dev-Tools-进行页面性能分析" class="headerlink" title="利用 Chrome Dev Tools 进行页面性能分析"></a>利用 Chrome Dev Tools 进行页面性能分析</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/105561186">(46 封私信) 前端性能优化之利用 Chrome Dev Tools 进行页面性能分析 - 知乎</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.chrome.google.cn/docs/devtools/performance?hl=zh-cn#analyze_frames_per_second">分析运行时性能  | Chrome DevTools  | Chrome for Developers</a></p>
+</blockquote>
+<hr>
+<h2 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h2><h3 id="前端构建打包流程"><a href="#前端构建打包流程" class="headerlink" title="前端构建打包流程"></a>前端构建打包流程</h3><p>将各种资源（包括JS、CSS、图片等）打包成一个或几个JS文件。在这个过程，可以进行代码拆分（懒加载，避免一次性加载过多内容导致性能问题）、代码压缩（通过tree-shakeing剔除无用代码）。</p>
+<h3 id="Webpack中loader和plugin的区别"><a href="#Webpack中loader和plugin的区别" class="headerlink" title="Webpack中loader和plugin的区别"></a>Webpack中loader和plugin的区别</h3><ul>
+<li>loader是文件加载器，用来加载和处理资源，例如将css转换为js模块，压缩图片等。</li>
+<li>plugin插件通过webpack的生命周期钩子来实现一些功能，例如打包优化、注入环境变量等。</li>
+</ul>
+<h3 id="webpack-和-vite-的核心区别"><a href="#webpack-和-vite-的核心区别" class="headerlink" title="webpack 和 vite 的核心区别"></a>webpack 和 vite 的核心区别</h3><p>webpack和vite的核心差异体现在开发阶段。</p>
+<p>webpack启动开发服务器之前，需要重新构建、打包整个应用，项目规模越大速度越慢；vite基于原生ES模块的动态加载机制，在开发阶段跳过了构建打包。只有当模块被使用到，浏览器发送请求后，vite才会把对应源码编译为ES模块，提供给浏览器，相当于实现模块懒加载。大大提高了项目的构建速度和热更新速度。</p>
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://jishuzhan.net/article/1954727204935479297">面试官：说说 Webpack 和 Vite 的区别 - 技术栈</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7283682738497765413?searchId=202603031106378079832DF9FB2485F914">这篇文章一定能让你搞懂vite为什么比webpack快！运行原理、构建方式等方面到底有什么不同！1.前端常见工具之间的定 - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://cn.vitejs.dev/guide/why#why-not-bundle-with-esbuild">为什么选 Vite | Vite 官方中文文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules#%E9%A1%B6%E5%B1%82_await">JavaScript 模块 - JavaScript | MDN</a></p>
+</blockquote>
+<h3 id="webpack-和-vite-的其他区别"><a href="#webpack-和-vite-的其他区别" class="headerlink" title="webpack 和 vite 的其他区别"></a>webpack 和 vite 的其他区别</h3><ul>
+<li><p>开发阶段的构建方式</p>
+<p>webpack项目中，每次启动开发服务器，需要重新构建、打包整个应用，项目规模越大速度越慢；</p>
+<p>vite基于原生ES模块的动态加载机制，在开发阶段直接跳过了构建打包（需要预构建），只有当模块被使用到，浏览器发送请求后，vite才会把对应源码编译为ES模块，提供给浏览器，相当于实现了模块懒加载。大大提高了项目的构建速度（和热更新速度）。</p>
+</li>
+<li><p>热更新：</p>
+<p>webpack项目中，每次修改文件，都会对整个项目重新进行打包，这对大项目来说，是非常不友好的。</p>
+<p>vite监听到文件变更后，会用<code>websocket</code>通知浏览器哪些模块有变化，浏览器重新发起新的请求，只替换发生变更的模块。</p>
+</li>
+<li><p>学习和使用成本：</p>
+<p>我们使用webpack自己去搭建项目脚手架时，需要配置比较多的东西， 比如：<code>跨域</code>、<code>代码压缩</code>、<code>代码分割</code>、<code>css预处理器的代码转换</code>、<code>样式兼容性</code>、<code>vue/react代码解析</code>、<code>图片压缩</code>、<code>代码热更新</code>、<code>es降级</code>、<code>ts转换</code>等等，使用成本很高。</p>
+<p>vite对我们常用功能都做了内置，vite官方也提供了一些官方模板、社区模板，我们可以快速地创建项目，不需要关心太多的配置项。学习成本低。</p>
+</li>
+<li><p>编程语言：</p>
+<p>webpack是基于<code>nodejs</code>编写的，但<code>js</code>只能单线程运行，无法利用多核CPU的优势；</p>
+<p>vite开发阶段的编译（<u>预构建</u>与<u>按需编译</u>），都是使用<code>esbuild</code>完成的。<code>esbuild</code>是用<code>go</code>语言编写的，可以充分利用多核CPU的优势。</p>
+</li>
+</ul>
+<h3 id="vite-预构建都做了什么？"><a href="#vite-预构建都做了什么？" class="headerlink" title="vite 预构建都做了什么？"></a>vite 预构建都做了什么？</h3><ul>
+<li>处理兼容性问题：预构建时，vite会把CommonJS等其他类型的模块转换为ES模块。</li>
+<li>模块合并：有些模块内部有很多模块，比如<code>lodash-es</code>内部有几百个模块，引入它时浏览器会同时发出几百个请求，会存在性能问题。vite会把这类模块预构建为单个模块，只需要一个请求。</li>
+</ul>
+<h3 id="vite热更新HMR原理"><a href="#vite热更新HMR原理" class="headerlink" title="vite热更新HMR原理"></a>vite热更新HMR原理</h3><h3 id="为什么选择用pinia做状态管理？"><a href="#为什么选择用pinia做状态管理？" class="headerlink" title="为什么选择用pinia做状态管理？"></a>为什么选择用pinia做状态管理？</h3><ol>
+<li>支持组合式api，简单易用。</li>
+<li>支持数据持久化，底层基于localStorage实现。</li>
+<li>尤雨溪本人推荐。</li>
+</ol>
+<h3 id="屏幕适配方案都有哪些？"><a href="#屏幕适配方案都有哪些？" class="headerlink" title="屏幕适配方案都有哪些？"></a>屏幕适配方案都有哪些？</h3><ol>
+<li>在视口单位出来之前，通过rem进行适配，实现思路是将根元素<html>的字体大小和屏幕尺寸建立比例关系，例如设为屏幕的1&#x2F;10，再将px转换为rem：</li>
+<li>在视口元素出现之后，直接将px转换位vw、vh等视口单位即可。</li>
+</ol>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://fedev.cn/css/vw-for-layout.html">再聊移动端页面的适配 - 前端开发者学堂 (fedev.cn) - 前端开发社区</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7163932925955112996?searchId=20260508204021B77EE1A60FF67C5BA54A#heading-2">一次搞懂数据大屏适配方案 (vw vh、rem、scale)当接到可视化大屏需求时，你是否会有以下疑问：如何做一款定制化 - 掘金</a></p>
+</blockquote>
+<h3 id="如何实现元素固定宽高比"><a href="#如何实现元素固定宽高比" class="headerlink" title="如何实现元素固定宽高比"></a>如何实现元素固定宽高比</h3><ul>
+<li>对于可替换元素<img>、<video>：因为元素本身宽高比是固定的，设置宽或者高任一值，另外一个值为auto即可。</li>
+<li>对于普通元素：通过aspect-ratio属性设置宽高比。再设置宽高的任一值，另外的值就会根据比例自动计算。</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904070679887886#heading-5">面试官：CSS如何实现固定宽高比？对于这个问题，你可能还没有过相关需求，或者还没有在面试的时候被问到过，但是歪马相信你终 - 掘金</a></p>
+</blockquote>
+<hr>
+<h2 id="手撕题"><a href="#手撕题" class="headerlink" title="手撕题"></a>手撕题</h2><h3 id="赋值、浅拷贝、深拷贝"><a href="#赋值、浅拷贝、深拷贝" class="headerlink" title="赋值、浅拷贝、深拷贝"></a>赋值、浅拷贝、深拷贝</h3><ul>
+<li>赋值：两个变量指向同一个对象</li>
+<li>浅拷贝：两个变量指向不同对象，但子对象指向同一个对象。</li>
+<li>深拷贝：两个变量指向不同对象，深层子对象也指向不同对象。</li>
+</ul>
+<p><u>浅拷贝的实现</u></p>
+<ul>
+<li><p>单个对象：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 展开运算符：</span></span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;...obj1&#125;;</span><br><span class="line"><span class="comment">// Object.assign():</span></span><br><span class="line"><span class="keyword">let</span> obj2 = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, obj1);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数组：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Array.prototype.concat()</span></span><br><span class="line"><span class="keyword">let</span> arr2 = arr1.<span class="title function_">concat</span>([]);</span><br><span class="line"><span class="comment">// Array.prototype.slice()</span></span><br><span class="line"><span class="keyword">let</span> arr2 = arr1.<span class="title function_">slice</span>();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通用实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">shallowCopy</span>(<span class="params">obj</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(!obj || <span class="keyword">typeof</span> obj !== <span class="string">&#x27;object&#x27;</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> newObj = <span class="title class_">Array</span>.<span class="title function_">isArray</span>(obj) ? [] : &#123;&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> newObj) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="title class_">Object</span>.<span class="title function_">hasOwn</span>(object, key))&#123;</span><br><span class="line">            newObj[key] = obj[key];</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> newObj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><u>深拷贝的实现</u></p>
+<ul>
+<li><p>JSON方法，存在一定问题，例如不支持函数类型</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj2 = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(obj1));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>递归实现</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">deepCopy</span>(<span class="params">obj, map = <span class="keyword">new</span> <span class="built_in">WeakMap</span>()</span>) &#123;</span><br><span class="line">  <span class="comment">// null或者不是对象，直接返回</span></span><br><span class="line">  <span class="keyword">if</span> (!obj || <span class="keyword">typeof</span> obj !== <span class="string">&quot;object&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 解决循环调用</span></span><br><span class="line">  <span class="keyword">if</span> (map.<span class="title function_">get</span>(obj)) &#123;</span><br><span class="line">    <span class="keyword">return</span> map.<span class="title function_">get</span>(obj);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> newObj = <span class="title class_">Array</span>.<span class="title function_">isArray</span>(obj) ? [] : &#123;&#125;;</span><br><span class="line">  map.<span class="title function_">set</span>(obj, newObj);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="keyword">if</span> (obj.<span class="title function_">hasOwnProperty</span>(key)) &#123;</span><br><span class="line">      newObj[key] = <span class="title function_">deepCopy</span>(obj[key], map);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newObj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7134970746580762637?searchId=2026040718222304547B957C5E8C89CDF8">前端面试 第三篇 js之路 深拷贝与浅拷贝JavaScript学习之路： 艰难且漫长, 摸爬滚打这些年，还剩头上三根毛， - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7356072512444465178?searchId=20260407182030872833AF42B9C2888DCB#heading-13">前端面试刷题必备（手撕代码篇）前端面试——JS 手写代码 前端面试刷题（JS篇）：https://juejin.cn/p - 掘金</a></p>
+</blockquote>
+<h3 id="手写防抖和节流"><a href="#手写防抖和节流" class="headerlink" title="手写防抖和节流"></a>手写防抖和节流</h3><p><u>防抖：</u>简单地说，当一个函数连续触发，只执行最后一次。具体的说，事件触发后，在n秒后执行函数，如果多次触发，则取消执行先前的函数，重新计时。</p>
+<p>应用场景：</p>
+<ol>
+<li>搜索框联想。</li>
+<li>用户名、手机号、邮箱输入验证。</li>
+<li>浏览器窗口大小改变，触发resize事件。</li>
+</ol>
+<p>代码实现：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">  <span class="comment">// 返回一个闭包函数，用闭包保存timer确保其不会销毁，重复点击会清理上一次的定时器</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><u>节流：</u>函数在n秒内只执行一次，如果n秒内多次触发，则忽略执行。</p>
+<p>应用场景：</p>
+<ol>
+<li>表单提交</li>
+<li>按钮提交事件</li>
+</ol>
+<p>代码实现：</p>
+<p><u>第一次立即执行</u>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> startTime = <span class="literal">null</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="title class_">Date</span>.<span class="title function_">now</span>() - startTime &gt;= delay) &#123;</span><br><span class="line">      startTime = <span class="title class_">Date</span>.<span class="property">now</span>;</span><br><span class="line">      <span class="keyword">return</span> fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><u>第一次延迟执行</u>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!timer) &#123;</span><br><span class="line">      timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> res = fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">        timer = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">      &#125;, delay);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7040633388625035272">【手写代码】面试官：请你手写防抖和节流本文章讲解面试时的手撕代码相关的节流与防抖相关问题，用js代码来实现节流与防抖，从 - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7272737742307065914#heading-6">前端铜九铁十面试必备八股文——手写代码实现一个new操作符 实现一个intanceof操作符 手写 Object.cre - 掘金</a></p>
+</blockquote>
+<hr>
+<h3 id="手写-new-和-instanceof"><a href="#手写-new-和-instanceof" class="headerlink" title="手写 new 和 instanceof"></a>手写 new 和 instanceof</h3><p>new:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myNew</span>(<span class="params">fn, ...args</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> fn !== <span class="string">&quot;function&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">TypeError</span>(<span class="string">&quot;fn must be a function&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 创建一个空对象，原型设置为构造函数的prototype属性</span></span><br><span class="line">  <span class="keyword">let</span> obj = <span class="title class_">Object</span>.<span class="title function_">create</span>(fn.<span class="property"><span class="keyword">prototype</span></span>);</span><br><span class="line">  <span class="keyword">let</span> result = fn.<span class="title function_">apply</span>(obj, args);</span><br><span class="line">  <span class="comment">// 如果构造函数返回了一个对象，则返回它，而不是新对象。覆盖正常的对象创建过程</span></span><br><span class="line">  <span class="keyword">let</span> flag = result &amp;&amp; <span class="keyword">typeof</span> result === <span class="string">&quot;object&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> flag ? result : obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>instanceof：判断构造函数的prototype属性是否出现在某个实例对象的原型链上</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myInstanceof</span>(<span class="params">obj, fn</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> objPrototype = <span class="title class_">Object</span>.<span class="title function_">getPrototypeOf</span>(obj);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span> (objPrototype) &#123;</span><br><span class="line">    <span class="keyword">if</span> (objPrototype === fn.<span class="property"><span class="keyword">prototype</span></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    objPrototype = <span class="title class_">Object</span>.<span class="title function_">getPrototypeOf</span>(objPrototype);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="数组扁平化"><a href="#数组扁平化" class="headerlink" title="数组扁平化"></a>数组扁平化</h3><h3 id="tree转换为数组，数组转换为tree"><a href="#tree转换为数组，数组转换为tree" class="headerlink" title="tree转换为数组，数组转换为tree"></a>tree转换为数组，数组转换为tree</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6987224048564437029?searchId=2026052215344990B744102AE578AB852F">Js实现扁平化数据结构和tree转换 –每天进步一点点我们都有过这样的需求：将tree扁平化，或者把扁平化的数组转换成 - 掘金</a></p>
+</blockquote>
+<h3 id="手写。三个颜色，一个div，每三秒变一下颜色，一直循环"><a href="#手写。三个颜色，一个div，每三秒变一下颜色，一直循环" class="headerlink" title="手写。三个颜色，一个div，每三秒变一下颜色，一直循环"></a>手写。三个颜色，一个div，每三秒变一下颜色，一直循环</h3><p>考察定时器</p>
+<p>使用setInterval：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> container = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;#container&quot;</span>);</span><br><span class="line"><span class="keyword">let</span> colorList = [<span class="string">&quot;rgb(111,111,111)&quot;</span>, <span class="string">&quot;rgb(222,222,222)&quot;</span>, <span class="string">&quot;rgb(256,256,256)&quot;</span>]</span><br><span class="line"><span class="keyword">let</span> index = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> intervalId = <span class="built_in">setInterval</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    container.<span class="property">style</span>.<span class="property">backgroundColor</span> = colorList[index];</span><br><span class="line">    index = (index + <span class="number">1</span>) % <span class="number">3</span></span><br><span class="line">&#125;,<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+
+<p>随机RGB颜色生成函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">getRandomRGBColor</span>(<span class="params"></span>) &#123;</span><br><span class="line">   <span class="keyword">let</span> r = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">   <span class="keyword">let</span> g = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">   <span class="keyword">let</span> b = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">   <span class="keyword">return</span> <span class="string">`rgb(<span class="subst">$&#123;r&#125;</span>,<span class="subst">$&#123;g&#125;</span>,<span class="subst">$&#123;b&#125;</span>)`</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h3><h3 id="实现每隔一秒打印-1-2-3-4"><a href="#实现每隔一秒打印-1-2-3-4" class="headerlink" title="实现每隔一秒打印 1,2,3,4"></a>实现每隔一秒打印 1,2,3,4</h3><p>利用let的块级作用域：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= <span class="number">4</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">  &#125;, (i - <span class="number">1</span>) * <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里使用var就会打印4个4</p>
+<h3 id="使用-setTimeout-实现-setInterval"><a href="#使用-setTimeout-实现-setInterval" class="headerlink" title="使用 setTimeout 实现 setInterval"></a>使用 setTimeout 实现 setInterval</h3><p>利用闭包</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">mySetInterval</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> timerId;</span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">interval</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">fn</span>();</span><br><span class="line">    timerId = <span class="built_in">setTimeout</span>(interval, delay);</span><br><span class="line">  &#125;</span><br><span class="line">  timerId = <span class="built_in">setTimeout</span>(interval, delay);</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="built_in">clearTimeout</span>(timerId);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="手写promise-all、带并发控制的promise-all"><a href="#手写promise-all、带并发控制的promise-all" class="headerlink" title="手写promise.all、带并发控制的promise.all"></a>手写promise.all、带并发控制的promise.all</h3><p>手写promise.all：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myAll</span>(<span class="params">promiseList = []</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> len = promiseList.<span class="property">length</span>;</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">const</span> result = [];</span><br><span class="line">    promiseList.<span class="title function_">forEach</span>(<span class="function">(<span class="params">p</span>) =&gt;</span> &#123;</span><br><span class="line">      p.<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        result.<span class="title function_">push</span>(res);</span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">if</span> (count === len) &#123;</span><br><span class="line">          <span class="title function_">resolve</span>(result);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;).<span class="title function_">catch</span>(<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">reject</span>(e);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>带控制并发数的promise.all</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myAll2</span>(<span class="params">promiseList = [], limit = <span class="number">3</span></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> len = promiseList.<span class="property">length</span>;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> result = [];</span><br><span class="line">  <span class="keyword">let</span> currIndex = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">while</span> (limit &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="title function_">start</span>();</span><br><span class="line">      limit--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">start</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (currIndex == len) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">let</span> p = promiseList[currIndex++];</span><br><span class="line">      p.<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">        result.<span class="title function_">push</span>(res);</span><br><span class="line">        count++;</span><br><span class="line">        <span class="keyword">if</span> (count == len) &#123;</span><br><span class="line">          <span class="title function_">resolve</span>(result);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="title function_">start</span>();</span><br><span class="line">      &#125;).<span class="title function_">catch</span>(<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">reject</span>(e);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="使用promise实现每隔1秒打印1、2、3"><a href="#使用promise实现每隔1秒打印1、2、3" class="headerlink" title="使用promise实现每隔1秒打印1、2、3"></a>使用promise实现每隔1秒打印1、2、3</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">arr.<span class="title function_">reduce</span>(<span class="function">(<span class="params">p, x</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> p.<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">r</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">r</span>(<span class="variable language_">console</span>.<span class="title function_">log</span>(x));</span><br><span class="line">      &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;, <span class="title class_">Promise</span>.<span class="title function_">resolve</span>());</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用Promise实现红绿灯交替重复亮"><a href="#使用Promise实现红绿灯交替重复亮" class="headerlink" title="使用Promise实现红绿灯交替重复亮"></a>使用Promise实现红绿灯交替重复亮</h3><p>绿黄红交替亮灯，间隔1秒。如何实现三个灯不断交替亮灯</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Promise</span>.<span class="title function_">resolve</span>(<span class="number">1</span>)</span><br><span class="line">    .<span class="title function_">then</span>(</span><br><span class="line">      <span class="function">() =&gt;</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">r</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> <span class="title function_">r</span>(<span class="title function_">green</span>()), <span class="number">1000</span>);</span><br><span class="line">        &#125;),</span><br><span class="line">    )</span><br><span class="line">    .<span class="title function_">then</span>(</span><br><span class="line">      <span class="function">() =&gt;</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">r</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> <span class="title function_">r</span>(<span class="title function_">yellow</span>()), <span class="number">1000</span>);</span><br><span class="line">        &#125;),</span><br><span class="line">    )</span><br><span class="line">    .<span class="title function_">then</span>(</span><br><span class="line">      <span class="function">() =&gt;</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">r</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">r</span>(<span class="title function_">red</span>());</span><br><span class="line">            <span class="title function_">f</span>();</span><br><span class="line">          &#125;, <span class="number">1000</span>);</span><br><span class="line">        &#125;),</span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h2 id="开放式问题"><a href="#开放式问题" class="headerlink" title="开放式问题"></a>开放式问题</h2><h3 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h3><p>面试官您好，我是朱玉冲，目前就读于东北大学软件工程专业，是一名研二学生。在校期间，我自学了JS、CSS、vue等前端相关知识，独立完成了一个提供即时通讯功能的聊天室项目。除此之外，我还加入了校级app掌上重邮的项目组，担任安卓开发，负责开发维护了用户中心、积分商城、邮问等多个模块。很荣幸能得到这次面试机会，希望今天面试能够顺利进行。</p>
+<h3 id="为什么选择学前端？"><a href="#为什么选择学前端？" class="headerlink" title="为什么选择学前端？"></a>为什么选择学前端？</h3><p>主要是个人兴趣吧。从上大学到现在，前端后端安卓都接触过，也做过一些项目。</p>
+<p>相比于安卓，前端的JS更灵活，例如高阶函数。前端的框架也更好用，开发体验比较好。安卓没有vue这样的声明式、响应式框架。至少我写安卓那会没有，只能用Java写回调，开发体验很差。</p>
+<p>相比于后端，前端写出来，能直接看到效果，更直观，更有成就感。</p>
+<p>所以我最后选择做前端。</p>
+<h3 id="你是怎么学前端的？"><a href="#你是怎么学前端的？" class="headerlink" title="你是怎么学前端的？"></a>你是怎么学前端的？</h3><p>我主要是以项目为导向进行学习的，先看项目需要哪些技术栈，再进行学习。</p>
+<p>对于每个知识点，我首先会看官方文档、MDN以及一些高赞博客。</p>
+<p>对概念、用法有了一定了解后，再做几个demo来进行实操，然后试着在项目里使用。</p>
+<p>通常一个知识点会涉及到很多其他的知识点，再进行延伸学习。</p>
+<h3 id="说一说你的学习方法"><a href="#说一说你的学习方法" class="headerlink" title="说一说你的学习方法"></a>说一说你的学习方法</h3><p>如果我要学一个新技术，首先我会去看官方文档，MDN有没有对应条目，以及一些高赞博客。</p>
+<p>对概念、用法有了初步了解后，我会用这个技术做几个demo，并且试着在项目里使用。</p>
+<p>这就是我的学习方法。</p>
+<h3 id="自我定位与职业规划"><a href="#自我定位与职业规划" class="headerlink" title="自我定位与职业规划"></a>自我定位与职业规划</h3><h3 id="如何看待加班"><a href="#如何看待加班" class="headerlink" title="如何看待加班"></a>如何看待加班</h3><h3 id="你的核心优势是什么？"><a href="#你的核心优势是什么？" class="headerlink" title="你的核心优势是什么？"></a>你的核心优势是什么？</h3><h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><h3 id="你这个聊天室项目最大的亮点是什么？"><a href="#你这个聊天室项目最大的亮点是什么？" class="headerlink" title="你这个聊天室项目最大的亮点是什么？"></a>你这个聊天室项目最大的亮点是什么？</h3><p>这个项目最大的亮点是基于websocket实现的实时聊天功能，对消息列表使用了虚拟列表进行性能优化。</p>
+<p>并且实现了断线重连功能，当websocket连接断开后，会自动切换到断线重连页面。每次重新连接会启动一个setTimeout定时器进行超时判断。判断超时会关闭websocket并提示用户。</p>
+<h3 id="说一说掌上重邮这个项目的亮点-难点"><a href="#说一说掌上重邮这个项目的亮点-难点" class="headerlink" title="说一说掌上重邮这个项目的亮点&#x2F;难点"></a>说一说掌上重邮这个项目的亮点&#x2F;难点</h3><p>这个项目的第一个亮点是使用了组件化和mvvm的架构。</p>
+<p>mvvm将项目分为model层、view层、viewmodel三层</p>
+<p>model层就是数据模型层，负责获取数据，接口请求、数据持久化操作放在这一层；view层是视图层，存放页面文件，在安卓中是xml文件，和前端的html很相似；viewmodel就是业务逻辑层，负责处理业务逻辑，以及view层和model层的通信。view层不能访问model层。</p>
+<p>好处是项目的层次分明，各个部分松耦合，可维护性高。</p>
+<h3 id="你做掌上重邮这个项目最大的收获是什么"><a href="#你做掌上重邮这个项目最大的收获是什么" class="headerlink" title="你做掌上重邮这个项目最大的收获是什么"></a>你做掌上重邮这个项目最大的收获是什么</h3><p>最大的收获是项目经验</p>
+<p>在开发过程中，首先我了解了中大型项目的架构，掌邮这个项目使用了组件化和mvvm的架构。</p>
+<p>其次可以在实际开发中应用学到的技术，加深对各个技术点的理解。</p>
+<p>最后是多人开发的经验，比如git的分支管理，合并出现冲突怎么解决，master分支有bug怎么解决等等。</p>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><h3 id="Git-中的工作区、暂存区、本地仓库和远程仓库"><a href="#Git-中的工作区、暂存区、本地仓库和远程仓库" class="headerlink" title="Git 中的工作区、暂存区、本地仓库和远程仓库"></a>Git 中的工作区、暂存区、本地仓库和远程仓库</h3><ul>
+<li>**工作区：**就是计算机里的项目文件夹</li>
+<li>**暂存区：**一个临时存储区域，用来存储需要提交到本地仓库的文件。通过<code>git add</code>命令将工作区的文件添加到暂存区</li>
+<li>**本地仓库：**储存本地分支和远端分支，通过<code>git commit</code>命令可以将暂存区的修改合并到本地仓库</li>
+<li>**远程仓库：**部署在远程服务器的仓库。将代码push到远程仓库前，如果此前有别人提交新的commit，需要先进行合并（通过<code>git fetch</code>+<code>git merge</code>或<code>git pull</code>命令）</li>
+</ul>
+<hr>
+<h3 id="git-pull-和-git-fetch-git-merge-的区别"><a href="#git-pull-和-git-fetch-git-merge-的区别" class="headerlink" title="git pull 和 git fetch + git merge 的区别"></a>git pull 和 git fetch + git merge 的区别</h3><ul>
+<li><strong>git fetch</strong>：获取远程仓库的最新更新，并更新到本地的远程分支仓库，本地分支不会更新。</li>
+<li><strong>git pull</strong>：获取远程分支的更新，更新到本地的远程分支仓库，然后自动将本地分支和远程分支进行合并。</li>
+</ul>
+<p>所以git pull &#x3D; git fetch + git merge。</p>
+<hr>
+<h3 id="git-rebase的作用"><a href="#git-rebase的作用" class="headerlink" title="git rebase的作用"></a>git rebase的作用</h3><p>把本地由分支合并导致的分叉提交历史整理成直线，目的是让提交历史更简洁，容易查看。</p>
+<hr>
+<h3 id="git常见命令"><a href="#git常见命令" class="headerlink" title="git常见命令"></a>git常见命令</h3><ul>
+<li>git add：将文件添加到暂存区</li>
+<li>git commit：将暂存区的修改提交到本地仓库</li>
+<li>git fetch：获取远程分支的最新更新，更新到本地的远端仓库</li>
+<li>git merge：将本地分支和远程分支合并</li>
+<li>git pull &#x3D; git fetch + git merge</li>
+<li>git rebase：变基，作用是将由于分支合并导致的分叉提交历史整理成一条直线，目的是让提交历史更简洁，容易查看。、</li>
+<li>git branch：创建分支</li>
+<li>git checkout&#x2F;git switch：切换分支</li>
+<li>git checkout -b&#x2F;git s：创建并切换分支</li>
+</ul>
+<hr>
+<h3 id="多人协作时怎么管理分支？"><a href="#多人协作时怎么管理分支？" class="headerlink" title="多人协作时怎么管理分支？"></a>多人协作时怎么管理分支？</h3><ul>
+<li>首先创建两个分支：master分支作为生产分支，dev分支作为开发分支。并且不在这两个分支上进行开发</li>
+<li>当开发一个新功能，或者修复一个bug时，从dev切出一个新的feature或者bugFix分支，功能完成后合并到dev分支并删除</li>
+<li>发布新版本时，将dev分支合并到master分支。</li>
+</ul>
+<h2 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h2><h3 id="如何理解当前主流的-Agent-开发"><a href="#如何理解当前主流的-Agent-开发" class="headerlink" title="如何理解当前主流的 Agent 开发"></a>如何理解当前主流的 Agent 开发</h3><hr>
+<p>todo：</p>
+<ol>
+<li><p>自我介绍</p>
+</li>
+<li><p>手撕：柯里化</p>
+</li>
+<li><p>为什么会存在跨域，JSONP 这种跨域方式你了解吗</p>
+</li>
+<li><p>你怎么理解 Vue3 里的 Hooks &#x2F; 组合式逻辑？</p>
+</li>
+<li><p>如果你往公共分支提交了一段有 bug 的代码，怎么安全撤回？</p>
+</li>
+<li><p>webpack&#x2F;vite相关</p>
+<ul>
+<li>vite在开发阶段和构建生产版本时构建行为不同，开发阶段只是通过esbuild进行预构建，实际上并没有进行构建打包；在生产阶段，vite使用Rollup（基于js编写）进行打包。不在生产阶段和开发阶段保持一致，是因为会存在性能问题，嵌套的ES模块导入会导致过多网络请求。</li>
+<li>webpack和vite的区别等问题复习</li>
+</ul>
+</li>
+<li><p>项目亮点</p>
+</li>
+<li><p>算法题、前端手撕题</p>
+</li>
+<li><p>柯里化函数</p>
+</li>
+<li><p>你平时怎么用AI？</p>
+</li>
+<li><p>你对京东的认知是什么样的？</p>
+</li>
+<li><p>未来择业最核心的三个要素</p>
+<p>业务、城市、待遇</p>
+</li>
+<li><p>后台系统是怎么设计的</p>
+<p>基于Spring MVC架构搭建的，整体分为三层：</p>
+<ul>
+<li>model层：数据模型层，负责存放实体类，进行数据库相关操作。使用mybatis框架简化SQL操作。</li>
+<li>controller层：接口层，负责封装接口，不处理任何业务逻辑</li>
+<li>service层：服务层，负责处理具体的业务逻辑</li>
+</ul>
+</li>
+<li><p>流式传输原理，怎么理解SSE的原理</p>
+<p>流式传输的原理就是基于SSE、WebSocket等技术实现服务端推送，底层原理是在客户端和服务端之间建立长连接。</p>
+</li>
+<li><p>哪个项目对你成长最大，展开介绍，技术上的成长体现在哪些方面</p>
+<p>如果是指前端技术的成长，是聊天室项目；如果是说综合成长，掌邮这个项目带给我的成长更大。</p>
+<ul>
+<li>第一个，项目中用到了onMounted钩子、nexttick函数，涉及到vue的生命周期、响应式原理、事件循环。对vue有了更深的理解。</li>
+<li>第二一个，了解了前端的打包流程、常见的打包工具webpack、vite等</li>
+<li>对性能优化有了一定的认识，比如说长列表怎么优化？怎么减少重排重绘的次数？以及一些常见的性能指标。</li>
+</ul>
+</li>
+<li><p>项目中做过哪些前端页面性能优化：</p>
+<ul>
+<li>代码分割，通过vue-router的动态导入，把不同的页面打包成不同的JS文件，实现页面懒加载</li>
+<li>用虚拟列表进行优化长列表</li>
+<li>通过cssText优化批量修改css的场景，减少重排重绘次数</li>
+<li>用tree-shaking优化打包文件体积</li>
+</ul>
+</li>
+<li><p>了解哪些前端性能监控手段</p>
+<ul>
+<li>performance面板，查看FCP、LCP、帧率等性能指标</li>
+<li>网络面板，看加载某些资源的耗时</li>
+</ul>
+</li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>前端面经整理</p><p><a href="https://anchor6777.github.io/2026/06/02/前端面经整理/">https://anchor6777.github.io/2026/06/02/前端面经整理/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Anchor</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2026-06-02</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2026-06-02</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><a class="link-muted mr-2" rel="tag" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a></div><div class="notification is-danger">You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.</div></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">Like this article? Support the author with</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>Afdian.net</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>Alipay</span><span class="qrcode"><img src="/" alt="Alipay"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>Buy me a coffee</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><div class="notification is-danger">You forgot to set the <code>business</code> or <code>currency_code</code> for Paypal. Please set it in <code>_config.yml</code>.</div><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>Wechat</span><span class="qrcode"><img src="/" alt="Wechat"></span></a></div></div></div><div class="card"><nav class="post-navigation mt-4 level is-mobile card-content"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2026/06/02/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="level-item">web学习笔记汇总</span><i class="level-item fas fa-chevron-right"></i></a></div></nav></div><div class="card" id="comments"><div class="card-content"><h3 class="title is-5">Comments</h3><div class="notification is-danger">You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.</div></div></div></div><style>.column.column-left,.column.column-right{display:none}</style><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://origin.picgo.net/2026/06/02/176159356380160d5259d7ce959bb.jpg" alt="Anchor"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Anchor</p><p class="is-size-6 is-block">你要带着你的翅膀去看全世界。</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Shenyang, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives/"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Category</p><a href="/categories/"><p class="title">1</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags/"><p class="title">3</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Anchor6777" target="_blank" rel="me noopener" id="widget-follow">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/Anchor6777"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2026/06/"><span class="level-start"><span class="level-item">June 2026</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E5%89%8D%E7%AB%AF/"><span class="tag">前端</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%90%8E%E7%AB%AF/"><span class="tag">后端</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%A2%E8%AF%95/"><span class="tag">面试</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--><style>.column.column-left,.column.column-right{display:block}</style></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img class="logo-img" src="/img/logo.svg" alt="Anchor&#039;s Blog" height="28"><img class="logo-img-dark" src="/img/logo-dark.svg" alt="Anchor&#039;s Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Anchor</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/imaegoo/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2026</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="GitHub" href="https://github.com/Anchor6777/"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><div class="searchbox-pinyin"><label class="checkbox"><input id="search-by-pinyin" type="checkbox" checked="checked"><span> 拼音检索</span></label></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/imaegoo/pinyin.js" defer></script><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script><script type="text/javascript" src="/js/imaegoo/imaegoo.js"></script><script type="text/javascript" src="/js/imaegoo/universe.js"></script></body></html>
